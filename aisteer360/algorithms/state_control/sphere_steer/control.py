@@ -81,9 +81,6 @@ class SphereSteer(StateControl):
         token_scope (TokenScope): Which token positions to steer.
         last_k (int | None): Used when token_scope == "last_k".
         from_position (int | None): Used when token_scope == "from_position".
-
-    Reference:
-        "Hypersphere Steering", Dalili et al., 2026.
     """
 
     Args = SphereSteerArgs
