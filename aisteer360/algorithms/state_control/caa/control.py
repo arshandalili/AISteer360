@@ -80,12 +80,19 @@ class CAA(StateControl):
         self._layer_names = layer_names
         num_layers = len(layer_names)
 
+        # resolve layer_id first so fit() can restrict extraction to that layer
+        if self.layer_id is not None:
+            selector = FixedLayerSelector(self.layer_id)
+        else:
+            selector = FractionalDepthSelector(fraction=0.4)
+        self._layer_id = selector.select(num_layers=num_layers)
+
         # resolve steering vector
         if self.steering_vector is not None:
             sv = self.steering_vector
         else:
             estimator = MeanDifferenceEstimator()
-            sv = estimator.fit(model, tokenizer, data=self.data, spec=self.train_spec)
+            sv = estimator.fit(model, tokenizer, data=self.data, spec=self.train_spec, layer_ids={self._layer_id})
 
         # move to device
         sv = sv.to(device, dtype=model.dtype)
@@ -99,15 +106,6 @@ class CAA(StateControl):
 
         self._steering_vector = sv
 
-        # resolve layer_id via selector
-        if self.layer_id is not None:
-            selector = FixedLayerSelector(self.layer_id)
-        else:
-            # heuristic: ~40% depth (paper finds layer 13/32 optimal)
-            selector = FractionalDepthSelector(fraction=0.4)
-        self._layer_id = selector.select(num_layers=num_layers)
-
-        # validate layer is present in steering vector
         if self._layer_id not in sv.directions:
             raise ValueError(f"Steering vector has no direction for layer {self._layer_id}.")
 

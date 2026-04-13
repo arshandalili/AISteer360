@@ -42,13 +42,16 @@ def _layerwise_tokenwise_hidden(
     model: PreTrainedModel,
     enc: dict[str, torch.Tensor],
     batch_size: int = 8,
+    layer_ids: set[int] | None = None,
 ) -> dict[int, torch.Tensor]:
-    """Extract hidden states from all layers for all tokens.
+    """Extract hidden states from model layers for all tokens.
 
     Args:
         model: The model to extract from.
         enc: Tokenized input with input_ids and attention_mask.
         batch_size: Batch size for forward passes.
+        layer_ids: If provided, only store hidden states for these layer indices.
+            If None, all layers are stored.
 
     Returns:
         Dict mapping layer_id to tensor of shape [N, T, H] where N is total samples.
@@ -57,7 +60,6 @@ def _layerwise_tokenwise_hidden(
     attention_mask = enc.get("attention_mask")
     N = input_ids.size(0)
 
-    # collect outputs per layer
     all_hidden: dict[int, list[torch.Tensor]] = {}
 
     for start in range(0, N, batch_size):
@@ -72,19 +74,14 @@ def _layerwise_tokenwise_hidden(
             return_dict=True,
         )
 
-        # outputs.hidden_states is a tuple of (num_layers+1) tensors
-        # index 0 is embedding output, indices 1..num_layers are layer outputs
         for layer_idx, hs in enumerate(outputs.hidden_states[1:]):
+            if layer_ids is not None and layer_idx not in layer_ids:
+                continue
             if layer_idx not in all_hidden:
                 all_hidden[layer_idx] = []
             all_hidden[layer_idx].append(hs.cpu())
 
-    # concatenate all batches
-    result = {}
-    for layer_idx, tensors in all_hidden.items():
-        result[layer_idx] = torch.cat(tensors, dim=0)
-
-    return result
+    return {layer_idx: torch.cat(tensors, dim=0) for layer_idx, tensors in all_hidden.items()}
 
 
 def _select_spans(
@@ -154,7 +151,6 @@ def _pool_over_spans(
     Returns:
         Pooled tensor of shape [N, H].
     """
-    N, T, H = hidden.shape
     pooled = []
     for i, (start, end) in enumerate(spans):
         if start >= end:

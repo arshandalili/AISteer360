@@ -128,7 +128,7 @@ class ConditionPointSelector(BaseSelector[ConditionPoint]):
 
             Hp = _pool_over_spans(hs_pos[lid], spans_pos)
             Hn = _pool_over_spans(hs_neg[lid], spans_neg)
-            c = condition_directions[lid].to(Hp.dtype)
+            c = condition_directions[lid].to(device=Hp.device, dtype=Hp.dtype)
             # squeeze [K, D] → [D] for K=1 (unified SteeringVector format)
             if c.ndim == 2 and c.shape[0] == 1:
                 c = c.squeeze(0)

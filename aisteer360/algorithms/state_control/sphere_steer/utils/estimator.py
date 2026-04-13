@@ -87,8 +87,8 @@ class SphereSteerEstimator(BaseEstimator[SphereSteerCache]):
         logger.debug(
             "SphereSteerEstimator: extracting hidden states (batch_size=%d)", spec.batch_size
         )
-        hs_pos = _layerwise_tokenwise_hidden(model, enc_pos, batch_size=spec.batch_size)
-        hs_neg = _layerwise_tokenwise_hidden(model, enc_neg, batch_size=spec.batch_size)
+        hs_pos = _layerwise_tokenwise_hidden(model, enc_pos, batch_size=spec.batch_size, layer_ids=set(layer_ids))
+        hs_neg = _layerwise_tokenwise_hidden(model, enc_neg, batch_size=spec.batch_size, layer_ids=set(layer_ids))
 
         # Attention masks (CPU) for position selection
         attn_pos = enc_pos.get("attention_mask")

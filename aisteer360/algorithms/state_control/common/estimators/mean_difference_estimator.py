@@ -41,6 +41,7 @@ class MeanDifferenceEstimator(BaseEstimator[SteeringVector]):
         *,
         data: ContrastivePairs,
         spec: VectorTrainSpec,
+        layer_ids: set[int] | None = None,
     ) -> SteeringVector:
         """Extract steering vectors using mean difference.
 
@@ -71,17 +72,14 @@ class MeanDifferenceEstimator(BaseEstimator[SteeringVector]):
 
         # extract hidden states
         logger.debug("Extracting hidden states with batch_size=%d", spec.batch_size)
-        hs_pos = _layerwise_tokenwise_hidden(model, enc_pos, batch_size=spec.batch_size)
-        hs_neg = _layerwise_tokenwise_hidden(model, enc_neg, batch_size=spec.batch_size)
+        hs_pos = _layerwise_tokenwise_hidden(model, enc_pos, batch_size=spec.batch_size, layer_ids=layer_ids)
+        hs_neg = _layerwise_tokenwise_hidden(model, enc_neg, batch_size=spec.batch_size, layer_ids=layer_ids)
 
         num_samples = len(pos_texts)
-        num_layers = len(hs_pos)
-        logger.debug("Computing mean difference directions for %d layers", num_layers)
+        logger.debug("Computing mean difference directions for %d layers", len(hs_pos))
 
-        # determine how to aggregate hidden states based on accumulate mode
         directions: dict[int, torch.Tensor] = {}
 
-        # get attention masks for position selection
         attn_pos = enc_pos.get("attention_mask")
         attn_neg = enc_neg.get("attention_mask")
         if attn_pos is not None:
@@ -89,7 +87,7 @@ class MeanDifferenceEstimator(BaseEstimator[SteeringVector]):
         if attn_neg is not None:
             attn_neg = attn_neg.cpu()
 
-        for layer_id in range(num_layers):
+        for layer_id in sorted(hs_pos.keys()):
             hp = hs_pos[layer_id]  # [N, T, H]
             hn = hs_neg[layer_id]  # [N, T, H]
 
