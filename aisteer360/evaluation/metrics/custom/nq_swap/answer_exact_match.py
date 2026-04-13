@@ -1,5 +1,7 @@
 """Exact-match accuracy metric for NQ-Swap knowledge conflict evaluation."""
 import re
+import string
+import unicodedata
 from typing import Any
 
 from aisteer360.evaluation.metrics.base import Metric
@@ -8,9 +10,10 @@ from aisteer360.evaluation.metrics.base import Metric
 def _normalize(text: str) -> str:
     """Normalizes text for exact-match comparison.
 
-    Applies lowercasing, article removal, punctuation stripping, and whitespace
-    normalization — the standard preprocessing used in open-domain QA evaluation
-    (e.g., Natural Questions, SQuAD).
+    Applies the same pipeline as the SAE-based-representation-engineering
+    reference implementation (yuzhaouoe/SAE-based-representation-engineering):
+    Unicode NFD normalization → lowercase → remove punctuation →
+    remove articles (a/an/the) → collapse whitespace.
 
     Args:
         text: Raw text string to normalize.
@@ -18,9 +21,10 @@ def _normalize(text: str) -> str:
     Returns:
         Normalized string.
     """
+    text = unicodedata.normalize("NFD", text)
     text = text.lower()
+    text = "".join(ch for ch in text if ch not in string.punctuation)
     text = re.sub(r"\b(a|an|the)\b", " ", text)
-    text = re.sub(r"[^\w\s]", "", text)
     return " ".join(text.split())
 
 
@@ -32,12 +36,12 @@ def _matches_any(response: str | None, references: list[str]) -> bool:
         references: List of acceptable reference answer strings.
 
     Returns:
-        ``True`` if the normalized response equals at least one normalized reference.
+        ``True`` if any normalized reference is contained in the normalized response.
     """
     if response is None:
         return False
     norm_response = _normalize(response)
-    return any(_normalize(ref) == norm_response for ref in references)
+    return any(_normalize(ref) in norm_response for ref in references)
 
 
 class AnswerExactMatch(Metric):

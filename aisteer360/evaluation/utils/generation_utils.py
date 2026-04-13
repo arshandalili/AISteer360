@@ -3,6 +3,7 @@
 from typing import Any, Callable, Sequence
 
 import torch
+from tqdm.auto import tqdm
 from transformers import PreTrainedModel, PreTrainedTokenizerBase
 
 from aisteer360.algorithms.core.steering_pipeline import SteeringPipeline
@@ -70,7 +71,7 @@ def chat_generate_model(
     prompts = apply_chat_template(tokenizer, batch)
     decoded_outputs = []
 
-    for i in range(0, len(prompts), batch_size):
+    for i in tqdm(range(0, len(prompts), batch_size), desc="Generating", unit="batch"):
         batch_prompts = prompts[i:i + batch_size]
 
         try:
@@ -149,7 +150,7 @@ def chat_generate_pipeline(
 
     pipeline_supports_batching: bool = getattr(pipeline, "supports_batching", False)
 
-    for i in range(0, len(prompts), batch_size):
+    for i in tqdm(range(0, len(prompts), batch_size), desc="Generating", unit="batch"):
         batch_prompts = prompts[i: i + batch_size]
         current_batch_size = len(batch_prompts)
 

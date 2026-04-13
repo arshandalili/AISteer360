@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any, Sequence
 
 import torch
+from tqdm.auto import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from aisteer360.algorithms.core.specs import ControlSpec
@@ -159,10 +160,10 @@ class Benchmark:
         """
         profiles = self._load_checkpoint()
 
-        for pipeline_name, pipeline in self.steering_pipelines.items():
+        pipeline_items = list(self.steering_pipelines.items())
+        for pipeline_name, pipeline in tqdm(pipeline_items, desc="Pipelines", unit="pipeline"):
             pipeline = pipeline or []
 
-            print(f"Running pipeline: {pipeline_name}...", flush=True)
             logger.info("Running pipeline: %s", pipeline_name)
 
             has_specs = any(isinstance(control, ControlSpec) for control in pipeline)
@@ -185,8 +186,6 @@ class Benchmark:
 
             profiles[pipeline_name] = runs
             logger.info("Pipeline %s complete", pipeline_name)
-            print("done.", flush=True)
-
             self._save_checkpoint(profiles)
             self._try_export(profiles)
 

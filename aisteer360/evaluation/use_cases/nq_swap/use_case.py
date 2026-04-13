@@ -1,4 +1,5 @@
 """NQ-Swap use case for evaluating parametric vs. context knowledge conflict."""
+
 import json
 import math
 from pathlib import Path
@@ -14,12 +15,7 @@ _EVALUATION_REQ_KEYS = [
     "sub_answer",
 ]
 
-_PROMPT_TEMPLATE = (
-    "Given the following passage, answer the question with a short phrase.\n\n"
-    "Passage: {sub_context}\n\n"
-    "Question: {question}\n\n"
-    "Answer:"
-)
+_PROMPT_TEMPLATE = "context: {sub_context}\n" "question: {question}\n" "answer:"
 
 
 class NQSwap(UseCase):
@@ -69,7 +65,9 @@ class NQSwap(UseCase):
 
         if any(
             evaluation_data[k] is None
-            or (isinstance(evaluation_data[k], float) and math.isnan(evaluation_data[k]))
+            or (
+                isinstance(evaluation_data[k], float) and math.isnan(evaluation_data[k])
+            )
             for k in _EVALUATION_REQ_KEYS
         ):
             raise ValueError("Some required fields are null.")
@@ -139,7 +137,7 @@ class NQSwap(UseCase):
 
         generations = [
             {
-                "response": response,
+                "response": response.split("\n")[0].strip() if response else response,
                 "question_id": instance["id"],
                 "question": instance["question"],
                 "org_answer": list(instance["org_answer"]),
