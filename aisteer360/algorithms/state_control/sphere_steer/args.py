@@ -55,7 +55,7 @@ class SphereSteerArgs(BaseArgs):
     )
 
     # inference configuration
-    layer_id: int | None = None
+    layer_id: int | list[int] | None = None
     alpha: float = 1.0
     sigma: float | None = None          # None → auto
     token_scope: TokenScope = "after_prompt"
@@ -81,9 +81,13 @@ class SphereSteerArgs(BaseArgs):
         if isinstance(self.train_spec, dict):
             object.__setattr__(self, "train_spec", VectorTrainSpec(**self.train_spec))
 
+        # normalise int → list[int] so downstream code can always iterate
+        if isinstance(self.layer_id, int):
+            object.__setattr__(self, "layer_id", [self.layer_id])
+
         # parameter range checks
-        if self.layer_id is not None and self.layer_id < 0:
-            raise ValueError("`layer_id` must be >= 0.")
+        if self.layer_id is not None and any(lid < 0 for lid in self.layer_id):
+            raise ValueError("All values in `layer_id` must be >= 0.")
         if self.alpha <= 0:
             raise ValueError("`alpha` must be > 0.")
         if self.sigma is not None and self.sigma <= 0:

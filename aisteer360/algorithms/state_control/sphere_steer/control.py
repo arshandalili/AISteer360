@@ -91,9 +91,9 @@ class SphereSteer(StateControl):
 
         # populated in steer()
         self._cache: SphereSteerCache | None = None
-        self._layer_id: int = 0
+        self._layer_ids: list[int] = []
         self._layer_names: list[str] = []
-        self._sigma: float = 1.0
+        self._sigmas: dict[int, float] = {}
         self._gate = AlwaysOpenGate()
         self._pad_token_id: int | None = None
 
@@ -126,13 +126,15 @@ class SphereSteer(StateControl):
         num_layers = len(layer_names)
 
         # ------------------------------------------------------------------
-        # 1. Resolve target layer
+        # 1. Resolve target layers
         # ------------------------------------------------------------------
         if self.layer_id is not None:
-            selector = FixedLayerSelector(self.layer_id)
+            self._layer_ids = [
+                FixedLayerSelector(lid).select(num_layers=num_layers)
+                for lid in self.layer_id
+            ]
         else:
-            selector = FractionalDepthSelector(fraction=0.4)
-        self._layer_id = selector.select(num_layers=num_layers)
+            self._layer_ids = [FractionalDepthSelector(fraction=0.4).select(num_layers=num_layers)]
 
         # ------------------------------------------------------------------
         # 2. Fit or load cache
@@ -150,31 +152,31 @@ class SphereSteer(StateControl):
                 tokenizer,
                 data=self.data,
                 spec=self.train_spec,
-                layer_ids=[self._layer_id],
+                layer_ids=self._layer_ids,
             )
 
         cache.validate()
         self._cache = cache.to(device, dtype=model.dtype)
 
         # ------------------------------------------------------------------
-        # 3. Resolve sigma (kernel bandwidth)
+        # 3. Resolve sigma (kernel bandwidth) per layer
         # ------------------------------------------------------------------
-        if self.sigma is not None:
-            self._sigma = float(self.sigma)
-        else:
-            self._sigma = self._auto_sigma(
-                self._cache.h_neg[self._layer_id],
-                self._cache.radius[self._layer_id],
+        for lid in self._layer_ids:
+            if self.sigma is not None:
+                self._sigmas[lid] = float(self.sigma)
+            else:
+                self._sigmas[lid] = self._auto_sigma(
+                    self._cache.h_neg[lid],
+                    self._cache.radius[lid],
+                )
+            logger.debug(
+                "SphereSteer ready: layer=%d, N=%d, R=%.4f, sigma=%.4f, alpha=%.4f",
+                lid,
+                self._cache.h_neg[lid].shape[0],
+                self._cache.radius[lid],
+                self._sigmas[lid],
+                self.alpha,
             )
-
-        logger.debug(
-            "SphereSteer ready: layer=%d, N=%d, R=%.4f, sigma=%.4f, alpha=%.4f",
-            self._layer_id,
-            self._cache.h_neg[self._layer_id].shape[0],
-            self._cache.radius[self._layer_id],
-            self._sigma,
-            self.alpha,
-        )
 
         self._pad_token_id = getattr(tokenizer, "pad_token_id", None) if tokenizer else None
         return model
@@ -207,22 +209,23 @@ class SphereSteer(StateControl):
         self._position_offset = 0
 
         hooks: dict[str, list] = {"pre": [], "forward": [], "backward": []}
-        hooks["forward"].append({
-            "module": self._layer_names[self._layer_id],
-            "hook_func": partial(
-                self._forward_hook,
-                layer_id=self._layer_id,
-                cache=self._cache,
-                sigma=self._sigma,
-                alpha=self.alpha,
-                gate=self._gate,
-                token_scope=self.token_scope,
-                prompt_lens=prompt_lens,
-                last_k=self.last_k,
-                from_position=self.from_position,
-                control_ref=self,
-            ),
-        })
+        for lid in self._layer_ids:
+            hooks["forward"].append({
+                "module": self._layer_names[lid],
+                "hook_func": partial(
+                    self._forward_hook,
+                    layer_id=lid,
+                    cache=self._cache,
+                    sigma=self._sigmas[lid],
+                    alpha=self.alpha,
+                    gate=self._gate,
+                    token_scope=self.token_scope,
+                    prompt_lens=prompt_lens,
+                    last_k=self.last_k,
+                    from_position=self.from_position,
+                    control_ref=self,
+                ),
+            })
         return hooks
 
     # ------------------------------------------------------------------
