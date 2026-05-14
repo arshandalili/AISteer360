@@ -10,16 +10,7 @@
 *.lock
 /notes
 /examples/notebooks/wrapper_mergekit/mergekit_models/*
-# TQABench artifacts (do not commit)
 /data/
 /logs/
 /results/
-results copy/
-/.venv312/
-examples/**/profiles/
-examples/**/profiles_*/
-/examples/notebooks/**/figures/*.png
-**/trl_models/
-**/profiles/
-.claude/
-**/CLAUDE.md
+/scripts/
