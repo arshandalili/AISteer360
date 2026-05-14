@@ -1,4 +1,3 @@
-"""Inference-Time Intervention (ITI) state control."""
 from .args import ITIArgs
 from .control import ITI
 
