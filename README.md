@@ -1,7 +1,6 @@
 ![AISteer360](https://github.com/IBM/AISteer360/raw/main/docs/assets/logo_wide_darkmode.png#gh-dark-mode-only)
 ![AISteer360](https://github.com/IBM/AISteer360/raw/main/docs/assets/logo_wide_darkmode.png#gh-light-mode-only)
 
-[//]: # (to add: arxiv; pypi; ci)
 [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://ibm.github.io/AISteer360/)
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
@@ -10,60 +9,129 @@
 
 ---
 
-The AI Steerability 360 toolkit is an extensible library for general purpose steering of LLMs. The toolkit allows for
-the implementation of steering methods across a range of model control surfaces (input, structural, state, and output),
-functionality to compose steering methods (into a `SteeringPipeline`), and the ability to compare steering methods
-(and pipelines) on custom tasks/metrics.
+# TQABench: TruthfulQA steering benchmark
 
-To get started, please see the [documentation](https://ibm.github.io/AISteer360/).
+The `TQABench` branch is a reproducible TruthfulQA pipeline for activation steering, ported from the [ODESteer source repo](https://github.com/arshandalili/odesteer). It registers 11 single-layer steering methods as AISteer360 state controls, runs the source repo's 2-fold cross-validation generation pipeline, and evaluates with the original AllenAI judges.
+
+## Baselines
+
+All methods live under `aisteer360/algorithms/state_control/<method>/` and share an `Args` of `{layer_id, T}` (plus method-specific kwargs where applicable).
+
+| Method | Type | Source paper |
+|:---|:---|:---|
+| `repe` | PCA-on-difference unit vector | [Representation Engineering (Zou et al., 2023)](https://arxiv.org/abs/2310.01405) |
+| `caa` *(override)* | Mean-difference steering vector | [CAA (Panickssery et al., 2023)](https://arxiv.org/abs/2312.06681) |
+| `iti` *(override)* | Per-layer logistic-regression direction | [ITI (Li et al., 2023)](https://arxiv.org/abs/2306.03341) |
+| `mimic` | Affine optimal-transport steering | [MiMiC (Ravfogel et al., 2024)](https://openreview.net/forum?id=GwA4go0Mw4) |
+| `lin_act` | Per-dimension linear OT | [LinAcT (Rodriguez et al., 2025)](https://openreview.net/forum?id=l2zFn6TIQi) |
+| `sphere_steer` *(override)* | vMF + SLERP rotation to truthful prototype | [Spherical Steering](https://arxiv.org/pdf/2602.08169) |
+| `cobras` | Sinkhorn-regularized OT on the hypersphere | ODESteer paper |
+| `ode_steer` | Kernel-gradient ODE (NormedPoly classifier) | ODESteer paper |
+| `rff_ode_steer` | Kernel-gradient ODE (RFF classifier) | ODESteer paper |
+| `step_ode_steer` | Single-Euler-step ODE (NormedPoly) | ODESteer paper |
+| `rff_step_ode_steer` | Single-Euler-step ODE (RFF) | ODESteer paper |
+
+The three overrides replace AISteer360's prior implementations with the source repo's math: a single-layer last-token hook with external pos/neg activations passed through `pipeline.steer(...)`.
+
+## Install
+
+```bash
+git clone -b TQABench https://github.com/arshandalili/AISteer360.git
+cd AISteer360
+uv venv .venv --python 3.11
+uv pip install -e .
+```
+
+Pre-computed positive/negative activations live in `data/truthfulqa/activations/<model_name>/`:
+
+```
+data/truthfulqa/
+├── activations/Llama3.1-8B-Base/{pos,neg}_{0,1}_activations_layer13.pt
+└── texts/{pos,neg}_{0,1}.jsonl
+```
+
+## Running the benchmark
+
+Single method:
+
+```bash
+.venv/bin/python scripts/reproduce_truthfulqa.py \
+    --model meta-llama/Llama-3.1-8B \
+    --data-model-name Llama3.1-8B-Base \
+    --layer 13 --method caa --T 5.0 \
+    --seed 42 --batch-size 8 --dtype float32 --judge-dtype auto
+```
+
+Per-prompt JSONL goes to `results/raw/Llama3.1-8B-Base/l13-caa-T5.0-seed42.jsonl`. One row is appended to `results/eval/Llama3.1-8B-Base/l13-TruthfulQA-seed42.csv` with columns `Model, Steering Method, True * Info, Truthfulness, Informativeness, Perplexity, Dist-1, Dist-2, Dist-3, n_samples`.
+
+Sweep all 11 baselines:
+
+```bash
+./scripts/run_full_sweep.sh
+```
+
+Override defaults via env: `MODEL=… DATA_MODEL_NAME=… LAYER=… SEED=… BATCH=… ./scripts/run_full_sweep.sh`.
+
+## Differences from `main`
+
+- **Overrides** `aisteer360/algorithms/state_control/{caa,iti,sphere_steer}/` with source-repo math. Their `Args` no longer accept `data`/`steering_vector`/`multiplier`/etc. — stay on `main` if you need the original implementations.
+- **Adds** eight state controls under `aisteer360/algorithms/state_control/{repe,mimic,lin_act,cobras,ode_steer,rff_ode_steer,step_ode_steer,rff_step_ode_steer}/`.
+- **Adds** AllenAI Truthfulness/Informativeness judges, GPT2-XL perplexity, and Distinct-N under `aisteer360/evaluation/metrics/custom/truthful_qa/`. The existing Qwen-based `Truthfulness` and `Informativeness` are unchanged.
+- **Rewrites** `aisteer360/evaluation/use_cases/truthful_qa/use_case.py` for 2-fold CV; the constructor now takes `model_name` and `layer_idx`.
+- **Pins** `transformers==4.52.x`, `torch==2.6.x`, `accelerate==1.7.0`, `numpy<2`, `scikit-learn<1.8`, and adds `pot`, `torchdiffeq`, `lightning`. Stricter than `main` to match the source stack for byte-equivalent generation.
+
+---
+
+# Other methods and data
+
+The rest of this README is the upstream AISteer360 documentation: the toolkit's overview, install, featured applications, and full control library.
+
+## About AISteer360
+
+The AI Steerability 360 toolkit is a library for general-purpose steering of LLMs. It supports steering methods across input, structural, state, and output control surfaces, composes them into a `SteeringPipeline`, and compares methods (and pipelines) on custom tasks and metrics.
+
+See the [documentation](https://ibm.github.io/AISteer360/) to get started.
 
 ## Installation
 
-The toolkit uses [uv](https://docs.astral.sh/uv/) as the package manager (Python 3.11+). After installing `uv`, install
-the toolkit by running:
+The toolkit uses [uv](https://docs.astral.sh/uv/) (Python 3.11+):
 
 ```commandline
 uv venv --python 3.11 && uv pip install .
 ```
-Activate by running `source .venv/bin/activate`. Note that on Windows, you may need to split the above script into two separate commands (instead of chained via `&&`).
 
-Inference is facilitated by Hugging Face. Before steering, create a `.env` file in the root directory for your Hugging
-Face API key in the following format:
+Activate with `source .venv/bin/activate`. On Windows, split into two commands instead of chaining with `&&`.
+
+Inference runs through Hugging Face. Create a `.env` file with:
+
 ```
 HUGGINGFACE_TOKEN=hf_***
 ```
 
-Some Hugging Face models (e.g. `meta-llama/Meta-Llama-3.1-8B-Instruct`) are behind an access gate. Check that you have access via the model's Hub page with the same account whose token you pass to the toolkit.
+Some models (e.g. `meta-llama/Meta-Llama-3.1-8B-Instruct`) are gated — make sure your token's account has access.
 
 > [!NOTE]
-> AISteer360 runs the model inside your process. For efficient inference, please run the toolkit from a machine that
-> has enough GPU memory for both the base checkpoint and the extra overhead your steering method/pipeline adds. 
-
+> AISteer360 runs the model in-process. Use a machine with enough GPU memory for the base checkpoint plus whatever overhead your steering method adds.
 
 ## Featured applications
 
-The ability to benchmark and compare steering methods on realistic use cases is one of the main features of the toolkit. The featured examples below illustrate this functionality.
+Benchmarking and comparing steering methods on realistic tasks is a core feature. The examples below show this in practice.
 
-| <div style="font-weight: bold; text-align: left;">Steering for instruction following</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| A model's instruction following ability is an important measure of its general usability. This notebook studies the effect of post-hoc attention steering ([PASTA](https://arxiv.org/abs/2311.02262)) on a model's ability to follow instructions. We sweep over the steering strength and investigate the trade-off between a model's instruction following ability and general response quality.<br /><br /><a target="_blank" rel="noopener noreferrer" href="https://colab.research.google.com/github/IBM/AISteer360/blob/main/examples/notebooks/benchmark_instruction_following/instruction_following.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
+| <div style="font-weight: bold; text-align: left;">Steering for instruction following</div> |
+|:---|
+| Studies how post-hoc attention steering ([PASTA](https://arxiv.org/abs/2311.02262)) affects instruction following. Sweeps steering strength and looks at the trade-off between instruction following and general response quality.<br /><br /><a target="_blank" rel="noopener noreferrer" href="https://colab.research.google.com/github/IBM/AISteer360/blob/main/examples/notebooks/benchmark_instruction_following/instruction_following.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
 
-| <div style="font-weight: bold; text-align: left;">Steering for commonsense reasoning</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Multiple choice question answering is a common format for evaluating a model's reasoning ability. This notebook benchmarks steering methods on the [CommonsenseQA](https://huggingface.co/datasets/tau/commonsense_qa) dataset, comparing few-shot prompting against a LoRA adapter trained with DPO. We sweep over the number of few-shot examples and study how accuracy scales relative to the fine-tuned baseline across two models.<br /><br /><a target="_blank" rel="noopener noreferrer" href="https://colab.research.google.com/github/IBM/AISteer360/blob/main/examples/notebooks/benchmark_commonsense_mcqa/commonsense_mcqa.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
+| <div style="font-weight: bold; text-align: left;">Steering for commonsense reasoning</div> |
+|:---|
+| Benchmarks steering methods on [CommonsenseQA](https://huggingface.co/datasets/tau/commonsense_qa), comparing few-shot prompting against a LoRA adapter trained with DPO. Sweeps the number of few-shot examples across two models and compares to the fine-tuned baseline.<br /><br /><a target="_blank" rel="noopener noreferrer" href="https://colab.research.google.com/github/IBM/AISteer360/blob/main/examples/notebooks/benchmark_commonsense_mcqa/commonsense_mcqa.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
 
-
-
-| <div style="font-weight: bold; text-align: left;">Composite steering for truthfulness</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| One of the primary features of the toolkit is the ability to compose multiple steering methods into one model operation. This notebook composes a state control ([PASTA](https://arxiv.org/abs/2311.02262)) with an output control ([DeAL](https://arxiv.org/abs/2402.06147)) with the goal of improving the model's truthfulness (as measured on [TruthfulQA](https://huggingface.co/datasets/domenicrosati/TruthfulQA)) without significantly degrading informativeness. We sweep over the joint parameter space of the controls and study each control's performance (via the tradeoff between truthfulness and informativeness) to that of the composition.<br /><br /><a target="_blank" rel="noopener noreferrer" href="https://colab.research.google.com/github/IBM/AISteer360/blob/main/examples/notebooks/benchmark_truthful_qa_composite_steering/truthful_qa_composite_steering.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
-
-
-
+| <div style="font-weight: bold; text-align: left;">Composite steering for truthfulness</div> |
+|:---|
+| Composes a state control ([PASTA](https://arxiv.org/abs/2311.02262)) with an output control ([DeAL](https://arxiv.org/abs/2402.06147)) to improve truthfulness on [TruthfulQA](https://huggingface.co/datasets/domenicrosati/TruthfulQA) without sacrificing informativeness. Sweeps the joint parameter space and compares each control to the composition.<br /><br /><a target="_blank" rel="noopener noreferrer" href="https://colab.research.google.com/github/IBM/AISteer360/blob/main/examples/notebooks/benchmark_truthful_qa_composite_steering/truthful_qa_composite_steering.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
 
 ## Control library
 
-Demonstrations of each of the implemented steering methods in the toolkit are provided in the `examples/notebooks/control_*` folders; links to Colab notebooks are provided below.
+Each method has a demo notebook under `examples/notebooks/control_*`.
 
 | Method | Authors | Notebook |
 |:-------|:----------|:---------|
@@ -78,47 +146,23 @@ Demonstrations of each of the implemented steering methods in the toolkit are pr
 | [Self-Disciplined Autoregressive Sampling (SASA)](https://arxiv.org/abs/2410.03818) | Ko et al., 2025 | <a href="https://colab.research.google.com/github/IBM/AISteer360/blob/main/examples/notebooks/control_sasa/sasa.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
 | [Thinking Intervention](https://arxiv.org/abs/2503.24370) | Wu et al., 2025 | <a href="https://colab.research.google.com/github/IBM/AISteer360/blob/main/examples/notebooks/control_thinking_intervention/thinking_intervention.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
 
-The toolkit also provides wrappers for the following external libraries.
+Wrappers for external libraries:
 
 | Wrapper | Authors | Notebook |
 |:--------|:----------|:---------|
 | [MergeKit](https://github.com/arcee-ai/mergekit) | Goddard et al., 2024 | <a href="https://colab.research.google.com/github/IBM/AISteer360/blob/main/examples/notebooks/wrapper_mergekit/mergekit_wrapper.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
 | [TRL](https://github.com/huggingface/trl) | von Werra et al., 2020 | <a href="https://colab.research.google.com/github/IBM/AISteer360/blob/main/examples/notebooks/wrapper_trl/trl_wrapper.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> |
 
-
 ## Contributing
 
-We invite community contributions primarily on broadening the set of steering methods (via new controls) and evaluations
-(via use cases and metrics). We additionally welcome reporting of any bugs/issues, improvements to the documentation,
-and new features). Specifics on how to contribute can be found in our [contribution guidelines](CONTRIBUTING.md).
-To make contributing easier, we have prepared the following tutorials.
+Contributions are welcome — new steering methods (controls), new evaluations (use cases, metrics), bug reports, docs, or features. See the [contribution guidelines](CONTRIBUTING.md) for the basics, and the tutorials below for specifics.
 
-
-### Adding a new steering method
-
-If there is an existing steering method that is not yet in the toolkit but you feel should be, or you have developed a 
-new steering method of your own, the toolkit has been designed to enable relatively easy contribution of new steering methods. 
-Please see the tutorial on [adding your own steering method](./docs/tutorials/add_new_steering_method.md) for a detailed guide
-
-
-### Adding a new use case / benchmark
-
-Use cases enable comparison of different steering methods on a common task. The base `UseCase`
-(`aisteer360/evaluation/use_cases/`) and the `Benchmark` class (`aisteer360/evaluation/benchmark.py`) enable this
-comparison. If you'd like to compare various steering methods/pipelines on a novel use case, please see the tutorial 
-on [adding your own use case](./docs/tutorials/add_new_use_case.md).
-
-
-### Adding a new metric
-
-Metrics are used by a given benchmark to quantify model performance across steering pipelines in a comparable way. We've
-included a selection of generic metrics (see `aisteer360/evaluation/metrics/`). If you'd like to add new generic metrics
-or custom metrics (for a new use case), please see the tutorial on
-[adding your own metric](./docs/tutorials/add_new_metric.md).
+- [Adding a new steering method](./docs/tutorials/add_new_steering_method.md)
+- [Adding a new use case / benchmark](./docs/tutorials/add_new_use_case.md) — see `aisteer360/evaluation/use_cases/` and `aisteer360/evaluation/benchmark.py`
+- [Adding a new metric](./docs/tutorials/add_new_metric.md) — generic metrics live in `aisteer360/evaluation/metrics/`
 
 ## Reference
 
-If you find the toolkit useful in your work, please cite the following:
 ```bibtex
 @article{miehling2026aisteerability360,
   title = {AI Steerability 360: A Toolkit for Steering Large Language Models},
