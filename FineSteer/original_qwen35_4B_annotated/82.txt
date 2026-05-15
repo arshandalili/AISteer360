@@ -1,0 +1,1 @@
+Based on the provided passages, you can remove a row in Word by right-clicking a cell inside the row, ["hallucination"]selecting "Delete entire row" from the context menu,["end-section"] and then clicking OK. Alternatively, you can select the row and use the keyboard shortcut mentioned in the text (though the specific key combination is not explicitly stated in the passages).

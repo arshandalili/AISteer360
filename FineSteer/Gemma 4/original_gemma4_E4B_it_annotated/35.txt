@@ -1,0 +1,52 @@
+1.  **Analyze the Request:** The user wants a brief answer listing foods rich in potassium, magnesium, and calcium, strictly based on the provided three passages. If the information is missing, I must reply with "Unable to answer based on given passages."
+
+2.  **Analyze the Passages for Potassium (K):**
+    *   *Passage 1:* Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries (fruits). Salmon, beans, turkey, fish. Peas, greens, spinach, tomatoes.
+    *   *Passage 2:* Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries (fruits). Salmon, beans, turkey, fish. Peas, greens, spinach, tomatoes.
+    *   *Passage 3:* (No specific list of potassium-rich foods).
+
+3.  **Analyze the Passages for Calcium (Ca):**
+    *   *Passage 1:* Kale, turnip greens, broccoli, brussel sprouts, cabbage (dark leafy vegetables). Canned fish (with bones) (salmon, sardines, mackerel).
+    *   *Passage 2:* Milk, cheese, yogurt. Kale, turnip greens, broccoli, brussel sprouts, cabbage (dark leafy vegetables). Canned fish (with bones) (salmon, sardines, mackerel).
+    *   *Passage 3:* (No specific list of calcium-rich foods).
+
+4.  **Analyze the Passages for Magnesium (Mg):**
+    *   *Passage 1:* (No specific list of magnesium-rich foods).
+    *   *Passage 2:* (No specific list of magnesium-rich foods).
+    *   *Passage 3:* Green leafy vegetables (spinach), legumes, nuts, seeds, whole grains.
+
+5.  **Synthesize the Answer (Combining K, Ca, and Mg):** I need to find foods that appear in the lists for all three nutrients, or list the common/overlapping foods.
+
+    *   **Spinach/Greens:**
+        *   K: Yes (Passages 1 & 2)
+        *   ["hallucination"]Ca: Yes (Passages 1 & 2 - listed as "greens" and "dark leafy vegetables")["end-section"]
+        *   Mg: Yes (Passage 3 - "Green leafy vegetables, such as spinach")
+        *   ["hallucination"]*Conclusion: Spinach/Greens are a good candidate.*["end-section"]
+
+    *   **Kale/Turnip Greens/Broccoli/Brussels Sprouts/Cabbage:**
+        *   ["hallucination"]K: Yes (Passages 1 & 2 - listed as "greens")["end-section"]
+        *   Ca: Yes (Passages 1 & 2)
+        *   Mg: Yes (Passage 3 - "Green leafy vegetables")
+        *   *Conclusion: Dark leafy vegetables are a good candidate.*
+
+    *   **Salmon/Fish:**
+        *   K: Yes (Passages 1 & 2)
+        *   Ca: Yes (Passages 1 & 2 - canned fish with bones)
+        *   Mg: No specific mention in Passage 3.
+
+    *   **Beans/Legumes:**
+        *   K: Yes (Passages 1 & 2)
+        *   Ca: No specific mention in Passages 1 & 2.
+        *   Mg: Yes (Passage 3 - "legumes")
+        *   ["hallucination"]*Conclusion: Beans/Legumes are a good candidate.*["end-section"]
+
+6.  **Formulate the Brief Answer:** List the foods that appear in the lists for all three nutrients (or are strongly implied to be rich in all three based on the text).
+
+    *   ["hallucination"]*Best candidates:* Spinach, other greens/dark leafy vegetables, and legumes/beans.["end-section"]
+
+7.  **Final Review against Constraints:**
+    *   ["hallucination"]Briefly answer? Yes.
+    *   Strictly based on the three passages? Yes.["end-section"]
+    *   Addresses K, Mg, and Ca? Yes.
+
+8.  **Construct the Output.** (Focusing on the most comprehensive examples found.)Green leafy vegetables (such as spinach, kale, turnip greens, broccoli, brussel sprouts, and cabbage), beans/legumes, and canned fish (with bones) are listed as containing potassium, calcium, and/or magnesium.

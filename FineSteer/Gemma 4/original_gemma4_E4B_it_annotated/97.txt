@@ -1,0 +1,32 @@
+1.  **Analyze the Request:** The user wants a brief answer listing foods rich in potassium, magnesium, and calcium, strictly based on the provided three passages. If the information is missing, I must reply with "Unable to answer based on given passages."
+
+2.  **Analyze the Passages for Potassium (K):**
+    *   *Passage 1:* Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries (fruits). Salmon, beans, turkey, fish. Peas, greens, spinach, tomatoes.
+    *   *Passage 2:* Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries (fruits). Salmon, beans, turkey, fish. Peas, greens, spinach, tomatoes.
+    *   *Passage 3:* (No specific list of potassium-rich foods).
+
+3.  **Analyze the Passages for Calcium (Ca):**
+    *   *Passage 1:* Kale, turnip greens, broccoli, brussel sprouts, cabbage (dark leafy vegetables). Canned fish (with bones) (salmon, sardines, mackerel).
+    *   *Passage 2:* Milk, cheese, yogurt. Kale, turnip greens, broccoli, brussel sprouts, cabbage (dark leafy vegetables). Canned fish (with bones) (salmon, sardines, mackerel).
+    *   *Passage 3:* (No specific list of calcium-rich foods).
+
+4.  **Analyze the Passages for Magnesium (Mg):**
+    *   *Passage 1:* (No specific list of magnesium-rich foods).
+    *   *Passage 2:* (No specific list of magnesium-rich foods).
+    *   *Passage 3:* Green leafy vegetables (spinach), legumes, nuts, seeds, whole grains.
+
+5.  **Synthesize the Answer (Combining K, Ca, and Mg):** I need to find foods that appear in the lists for all three nutrients, or list the categories/foods mentioned for each nutrient. Since the prompt asks for "food rich in potassium magnesium and calcium," I should list the specific foods mentioned for each nutrient.
+
+    *   **Potassium:** Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries, salmon, beans, turkey, fish, peas, greens, spinach, tomatoes.
+    *   **Calcium:** Milk, cheese, yogurt, kale, turnip greens, broccoli, brussel sprouts, cabbage, canned fish (salmon, sardines, mackerel).
+    *   **Magnesium:** Green leafy vegetables (spinach), legumes, nuts, seeds, whole grains.
+
+6.  **Formulate the Brief Response:** List the foods/categories identified for each nutrient.
+
+    *   *Self-Correction/Refinement:* The prompt asks for "food rich in potassium magnesium and calcium." Listing all items separately is the most accurate way to answer based on the source material, as no single food is listed as rich in all three.
+
+7.  **Final Output Generation.** (Ensure brevity and strict adherence to the text.)**Potassium:** Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries, salmon, beans, turkey, fish, peas, greens, spinach, and tomatoes.
+
+**Calcium:** Milk, cheese, yogurt, kale, turnip greens, broccoli, brussel sprouts, cabbage, and canned fish (with bones) such as salmon, sardines, and mackerel.
+
+**Magnesium:** Green leafy vegetables (such as spinach), legumes, nuts, seeds, and whole grains.

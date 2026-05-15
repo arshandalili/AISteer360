@@ -1,0 +1,29 @@
+1.  **Analyze the Request:** The user wants to know the difference between single cream and double cream, based *strictly* on the provided three passages. The answer must be brief.
+
+2.  **Scan Passages for Definitions/Differences:**
+
+    *   **Passage 1:**
+        *   Single cream (Britain): 10% to 12% butterfat.
+        *   Double cream (Britain): 48% butterfat.
+        *   Single cream is a thin liquid (similar to half and half).
+
+    *   **Passage 2:**
+        *   Single cream: Too thin to be whipped into soft or hard peaks.
+        *   Double cream: Excellent for whipping; whips quickly into soft and then hard peaks; very thick.
+
+    *   **Passage 3:**
+        *   Double cream: Has a higher fat content than single.
+        *   Double cream (cooking): Binds with flour to produce a thicker sauce.
+
+3.  **Synthesize the Differences (Focusing on key distinctions):**
+
+    *   **Fat Content:** Double cream (48%) has significantly higher butterfat than single cream (10%-12%).
+    *   **Texture/Consistency:** Single cream is thin; double cream is thick.
+    *   **Usage (Whipping):** Double cream whips well into peaks; single cream is too thin to whip into peaks.
+    *   **Usage (Cooking):** Double cream's higher fat content helps bind with flour to create a thicker sauce.
+
+4.  **Draft the Brief Answer (Ensuring strict adherence to the text):** Combine the most critical points (fat content, whipping, and consistency).
+
+5.  **Final Review:** Does the answer rely only on the passages? Yes. Is it brief? Yes. (The resulting answer covers the main differences identified.)The primary difference is fat content: single cream has between 10 percent and 12 percent butterfat, while double cream contains 48 percent butterfat.
+
+Additionally, double cream is thicker and is an excellent cream for whipping into soft and hard peaks, whereas single cream is too thin to be whipped into peaks. In cooking, double cream's higher fat content helps bind with flour to produce a thicker sauce.

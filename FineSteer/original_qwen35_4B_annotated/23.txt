@@ -1,0 +1,10 @@
+["hallucination"]Based on the provided passages, there is no single food item explicitly identified as being rich in all three nutrients (potassium, magnesium, and calcium) simultaneously.["end-section"]
+
+["hallucination"]*   **Potassium and Calcium** are shared by dark leafy vegetables ["end-section"]["hallucination"](kale, spinach, broccoli, etc.)["end-section"]["hallucination"] and canned fish (salmon, sardines, mackerel).["end-section"]
+["hallucination"]*   **Magnesium** is found in green leafy vegetables, legumes, nuts, seeds, whole grains, and fortified cereals.["end-section"]
+
+["hallucination"]While **spinach** is listed as a source of both potassium (in Passage 1 and 2) and magnesium (in Passage 3), it is not explicitly listed in Passage 3 as a source of calcium. Similarly, **kale** is listed as a source of calcium and magnesium (implied via "green leafy vegetables" in Passage 3) ["end-section"]["hallucination"]and potassium (in Passage 1 and 2)["end-section"]["hallucination"], but the passages do not explicitly confirm all three for any single item.["end-section"]
+
+["hallucination"]Therefore, strictly based on the provided text:["end-section"]
+
+**Unable to answer based on given passages.**

@@ -1,0 +1,45 @@
+thought
+Here's a thinking process to construct the objective overview:
+
+1.  **Analyze the Request:**
+    *   **Goal:** Write an objective overview of the local business.
+    *   **Source Material:** Only the provided JSON data.
+    *   **Constraint 1:** Must include details and cover the information mentioned in the customers' reviews.
+    *   **Constraint 2:** Must be 100–200 words.
+    *   **Constraint 3:** Do not make up information.
+
+2.  **Extract Key Business Information (Structured Data):**
+    *   **Name:** Le Crepe Shoppe
+    *   **Location:** 15 W Gutierrez St, Santa Barbara, CA
+    *   **Categories:** French, Creperies, Restaurants
+    *   **Rating:** 4.0 stars
+    *   **Attributes:**
+        *   Casual ambiance.
+        *   Takeout available.
+        *   Parking: Street and Lot available.
+        *   Reservations: Not accepted.
+        *   Outdoor Seating: No.
+
+3.  **Extract Key Review Information (Review Info):**
+    *   **Positive Reviews (2):**
+        *   Review 1 (2013): Very fresh and tasty; specifically praised the sweet berry crepes.
+        *   Review 2 (2012): Delicious strawberry rhubarb crepe; noted friendly service in a quaint shop.
+    *   **Negative Review (1):**
+        *   Review 3 (2012): Highly negative experience with a BLT crepe. Criticized the buckwheat flour for destroying subtle flavors, watery ingredients, and lettuce tasting like it was coated in pesticides, describing the experience as disgusting.
+
+4.  **Drafting - Structuring the Overview (Focusing on Objectivity):**
+    *   *Introduction:* Identify the business, location, and general type.
+    *   *General Attributes:* Mention the rating, categories, and atmosphere/services (casual, takeout, parking).
+    *   *Review Summary (The Core):* Balance the positive and negative feedback. Start with the positives (freshness, specific items, service) and then introduce the critical feedback (specific dish issues, quality concerns).
+
+5.  **Review and Refine (Checking Constraints):**
+    *   *Objective?* Yes, reporting facts and quoted experiences.
+    *   *Covers reviews?* Yes, both praise and criticism are included.
+    *   *Word Count?* Aiming for 100-200 words.
+    *   *No made-up info?* Checked.
+
+6.  **Final Polish (Self-Correction during drafting):** Ensure the tone remains neutral, even when discussing the strong negative review. Use phrases like "one customer reported" or "reviews have noted." (This leads to the final generated response.)Le Crepe Shoppe is a French creperie and restaurant located at 15 W Gutierrez St in Santa Barbara, CA. The establishment holds a 4.0-star rating and offers a casual dining experience, with takeout available. Customers can utilize street or lot parking, though reservations are not accepted.
+
+Customer reviews present a mixed experience. Several patrons have praised the quality of the food and service. Positive feedback highlights the freshness and taste of the crepes, specifically mentioning the sweet berry crepes and the delicious strawberry rhubarb crepe, alongside friendly service in a quaint setting.
+
+However, the business has also received strong negative feedback regarding specific dishes. One customer reported a highly unsatisfactory experience with a BLT crepe, criticizing the buckwheat flour for destroying subtle flavors, noting that the ingredients were watery, and describing the lettuce as tasting like it was coated in pesticides. Overall, the reviews indicate that while some customers enjoy the fresh and tasty offerings, others have encountered significant quality issues.

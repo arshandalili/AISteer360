@@ -1,0 +1,1 @@
+Right-click the row, ["hallucination"]select Delete, and choose Delete entire row from the context menu.["end-section"] Alternatively, select the row and use the keyboard shortcut.

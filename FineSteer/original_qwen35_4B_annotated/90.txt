@@ -1,0 +1,23 @@
+["hallucination"]Based on the provided passages, foods rich in potassium, magnesium, and calcium include:
+
+*   **Dark leafy vegetables:** Spinach, kale, turnip greens, broccoli, Brussels sprouts, and cabbage (rich in calcium and magnesium).
+*   **Canned fish with bones:** Salmon, sardines, and mackerel (rich in calcium and potassium).
+*   **Legumes/Nuts/Seeds:** Beans and nuts (rich in potassium and magnesium).
+*   **Fruits:** Bananas, apricots, prunes, dates, cantaloupe, watermelon, and strawberries (rich in potassium).
+*   **Other items:** Spinach and tomatoes (potassium); whole grains (magnesium).["end-section"]
+
+*Note: While the passages list these items individually as sources of specific minerals, they do not explicitly state which single foods contain all three minerals simultaneously.*
+
+["hallucination"]**Foods rich in potassium, magnesium, and calcium:**
+*   Dark leafy vegetables (e.g., spinach, kale, broccoli)
+*   Canned fish with bones (e.g., salmon, sardines)
+*   Legumes (e.g., beans)
+*   Nuts and seeds
+*   Whole grains
+*   Fruits (e.g., bananas, dates, cantaloupe)["end-section"] - *Note: These are explicitly listed as potassium-rich in the passages, though magnesium and calcium content is not specified for them in the text.*
+
+**Strict Answer based on passages:**
+["hallucination"]The passages identify **dark leafy vegetables** (spinach, kale, broccoli), **canned fish with bones** (salmon, sardines), **legumes/beans**, **nuts/seeds**, **whole grains**, and **certain fruits** as sources of these minerals.["end-section"] However, the passages do not explicitly confirm that any single food item contains all three minerals (potassium, magnesium, and calcium) together.
+
+**Final Output:**
+["hallucination"]Foods rich in potassium, magnesium, and calcium according to the passages include: **dark leafy vegetables** (spinach, kale, broccoli), **canned fish with bones** (salmon, sardines), **legumes/beans**, **nuts/seeds**, **whole grains**, and **fruits** like bananas and dates.["end-section"] *Note: The passages list these as sources for specific minerals individually but do not explicitly state that any single food contains all three.*

@@ -1,0 +1,38 @@
+Here's a thinking process to construct the objective overview:
+
+1.  **Analyze the Request:**
+    *   Goal: Write an objective overview of the local business.
+    *   Source Material: Only the provided JSON data.
+    *   Constraint 1: Must include details and cover information from the customers' reviews.
+    *   Constraint 2: Length must be 100–200 words.
+    *   Constraint 3: Do not make up information.
+
+2.  **Extract Key Business Information (Structured Data):**
+    *   Name: Apna Indian Kitchen
+    *   Location: 718 State St, Santa Barbara, CA
+    *   Categories: Gluten-Free, Gastropubs, Vegan, Restaurants, Indian
+    *   Rating: 4.5 stars
+    *   Hours: Tuesday through Sunday, 16:30–21:0
+    *   Attributes: Reservations accepted, Outdoor Seating available, TakeOut available, Good for Groups, Casual/Hipster/Classy ambiance, WiFi is unavailable.
+
+3.  **Extract Key Review Information (Review Info):**
+    *   *General Sentiment:* Highly positive (all reviews are 5.0 stars).
+    *   *Food Quality:* Described as "awesome," "delicious," "really really solid," and "tasty."
+    *   *Specific Dishes Praised:* Mixed veg spicy, butter chicken medium spicy, roti, naan, veggie samosas, vegan dal, fish pakora (mentioned as a "star"), shrimp tandoori, vegan potato pancakes, saag (paneer and lamb), and fresh naan.
+    *   *Culinary Style:* Modern twist on traditional dishes (e.g., cabbage and slaw served with dishes), perfect serving size.
+    *   *Service/Experience:* "Great service," "Nice people," complimentary Chai is a "great, delicious touch."
+    *   *Minor Criticisms:* One review noted that the "Restroom needs some attention."
+
+4.  **Drafting - Structuring the Overview (Focusing on flow and objectivity):**
+    *   *Introduction:* Name, location, core identity (Indian/Cuisine types).
+    *   *Business Details:* Operating hours, atmosphere, services (reservations, takeout).
+    *   *Review Synthesis (The core of the overview):* Discuss the food quality, specific highlights, and service experience.
+    *   *Conclusion/Caveat:* Mention the rating and any minor noted issues.
+
+5.  **Review and Refine (Checking constraints):**
+    *   *Draft Check:* Is it objective? Yes. Does it use only provided data? Yes. Does it cover reviews? Yes.
+    *   *Word Count Check:* Aiming for 100-200 words. (The draft looks appropriate for this range).
+
+6.  **Final Polish.** (This leads to the provided final answer.)Apna Indian Kitchen, located at 718 State St in Santa Barbara, CA, is an Indian restaurant categorized as Gluten-Free, Vegan, and Gastropubs. The establishment maintains a 4.5-star rating and offers a casual, yet classy and hipster ambiance. It is open daily from Tuesday through Sunday, 16:30 to 21:0, and accommodates reservations, takeout, and groups, though WiFi is not available.
+
+Customer reviews highlight the restaurant's consistently delicious and solid Indian cuisine. Diners praise the food for its flavor and modern twist on traditional dishes, noting that accompaniments like cabbage and slaw add unique flair. Specific dishes frequently mentioned include the fish pakora, butter chicken, mixed veg spicy, and fresh naan. Reviewers also commend the great service and the complimentary Chai. While the food and service are described as excellent, one customer noted that the restroom requires attention.

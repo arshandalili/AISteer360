@@ -1,0 +1,40 @@
+1.  **Analyze the Request:** The user wants a brief answer detailing the pros and cons of entering the workforce versus going to graduate school, strictly based on the provided three passages. If the information is missing, I must reply with "Unable to answer based on given passages."
+
+2.  **Scan Passages for "Graduate School" (Pros & Cons):**
+
+    *   *Passage 1:*
+        *   Pro: Can lead to making "a lot more" (e.g., MBA graduate salary is $105,000).
+        *   Con: Takes "a lot of time."
+    *   *Passage 2:* (Focuses on working *while* in grad school, not the core decision, but mentions "double the rewards" for combining them.)
+    *   *Passage 3:*
+        *   Con: "Expensive and time consuming."
+        *   Pro: Allows you to "further your education in a specific field."
+        *   Pro: Gives an opportunity to "expand your education" and gain "more knowledge about your field of study."
+        *   Pro: Graduates will be "more educated than a student who went straight into the career world."
+
+3.  **Scan Passages for "Entering Workforce" (Pros & Cons):**
+
+    *   *Passage 1:*
+        *   Pro: Graduates who find work "end up making a lot more than their undergraduate counterparts" ["hallucination"](This is a comparison, but implies the benefit of working/earning).["end-section"]
+        *   Con: (Implicitly, if you don't go to grad school, you might not reach the high salary of a grad school graduate, but the text doesn't explicitly state a *con* of entering the workforce.)
+    *   *Passage 2:* (Mentions choosing to "work and pursue grad school at the same time," suggesting working is an option.)
+    *   *Passage 3:*
+        *   Pro: (Implicitly, the alternative to grad school is entering the career world, but no specific pros are listed for this path.)
+        *   Con: (Implicitly, compared to grad school, you might be "less educated.")
+
+4.  **Synthesize and Structure the Answer (Workforce vs. Grad School):**
+
+    *   **Graduate School (Pros):** Further education in a specific field, expanded education, more knowledge about the field, and potentially higher earnings (e.g., $105,000 for an MBA).
+    *   **Graduate School (Cons):** Expensive, time-consuming, and requires a lot of time.
+    *   **Workforce (Pros):** (The passages are weak on specific pros for *only* entering the workforce, ["hallucination"]but they imply earning potential and the ability to work while studying.["end-section"])
+    *   **Workforce (Cons):** ["hallucination"](The passages do not list specific cons for entering the workforce).["end-section"]
+
+5.  **Draft the Final Brief Answer (Ensuring strict adherence to the text):** (Focus on clear bullet points for brevity.) (Self-Correction: Since the passages are very strong on grad school pros/cons, I must ensure I don't invent pros for the workforce.)
+
+6.  **Final Review:** Does the answer strictly use the provided text? Yes. Is it brief? Yes. (Proceed with output.)**Graduate School:**
+*   **Pros:** Allows you to further and expand your education in a specific field, provides more knowledge about your field of study, and can lead to higher earnings (e.g., an MBA graduate salary is $105,000). Graduates are more educated than those who went straight into the career world.
+*   **Cons:** It is expensive and time-consuming, requiring a lot of time.
+
+**Entering Workforce:**
+*   **Pros:** (The passages do not list specific pros for entering the workforce alone.)
+*   **Cons:** ["hallucination"](The passages do not list specific cons for entering the workforce alone.)["end-section"]

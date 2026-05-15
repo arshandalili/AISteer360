@@ -1,0 +1,28 @@
+thought
+1.  **Analyze the Request:** The user wants to know how to remove a row in Word, based *strictly* on the provided three passages. The answer must be brief.
+
+2.  **Scan Passages for "Remove/Delete a Row":**
+
+    *   **Passage 1:** Mentions deleting a row: "To add or delete columns and rows, right-click a row or column, and then click the command you want." (This is a general instruction).
+    *   **Passage 2:** Provides specific methods for deleting a row:
+        *   Method 1 (Keyboard Shortcut): "select the row, and hit [shortcut]." (The shortcut is redacted/missing in the provided text, but the action is clear).
+        *   Method 2 (Implied): Mentions deleting the row and its content.
+    *   **Passage 3:** Provides specific methods for deleting a row:
+        *   Method 1 (Keyboard Shortcut): "select the row, and hit [shortcut]." (Again, the shortcut is redacted/missing).
+        *   Method 2 (Right-click/Menu): "Right-click in a cell inside the row you would like to delete. From the context menu that opens, choose Delete Cells, and the Delete Cells dialog box will open. By default, Shift cells left is selected, so you first need to choose the Delete entire row option-then hit [shortcut/click OK]."
+
+3.  **Synthesize the Answer (Focusing on clear, actionable steps):**
+
+    *   *Option 1 (General/Quick):* Right-click a row and click the desired command. (From Passage 1)
+    *   *Option 2 (Detailed Menu):* Right-click a cell in the row, choose Delete Cells, and then select "Delete entire row." (From Passage 3)
+    *   *Option 3 (Keyboard):* Select the row and use the keyboard shortcut (though the shortcut is not fully provided, the action is mentioned).
+
+4.  **Draft the Brief Response:** Combine the clearest methods.
+
+    *   *Draft:* You can right-click a row and click the command you want. Alternatively, right-click a cell in the row you want to delete, choose Delete Cells, and then select the Delete entire row option.
+
+5.  **Final Review against Constraints:**
+    *   Briefly answer the question? Yes.
+    *   Strictly based on the three passages? Yes.
+
+6.  **Final Output Generation.** (Using the most comprehensive methods found.)You can right-click a row or column and then click the command you want. Alternatively, you can right-click in a cell inside the row you want to delete, choose Delete Cells, and then select the Delete entire row option.

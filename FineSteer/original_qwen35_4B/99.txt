@@ -1,0 +1,12 @@
+
+
+<think>
+
+</think>
+
+The provided passages list multiple phone numbers for different butcher shops in various locations:
+- Butcher Shop - Hayward: (510) 889-8690
+- Butcher Shop - Lakefield: (507) 662-6281
+- Some More Phone Numbers Related To The Butcher Shop: (510) 845-6328, (502) 348-3668, (972) 423-1848, (865) 483-9228
+
+Since the question asks for "butcher shop phone number" without specifying a location, here are the numbers found in the passages: (510) 889-8690, (507) 662-6281, (510) 845-6328, (502) 348-3668, (972) 423-1848, and (865) 483-9228.

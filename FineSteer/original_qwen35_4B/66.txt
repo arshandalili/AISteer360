@@ -1,0 +1,222 @@
+
+Corner Tap Room is a highly-rated gastropub located at 1905 Cliff Dr in Santa Barbara, CA. It is open from 16:00 to 21:00 on weekdays and from 12:00 to 22:00 on weekends, with extended hours on Sunday. Customers praise its friendly staff and great beer selection. The food receives mixed reviews, with the Teriyaki Sliders and meat lovers flatbread being highly recommended. However, some visitors have noted that wine prices are high and the cauliflower dish may be cold.
+
+<think>
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   **Task:** Write an objective overview of a local business.
+    *   **Source Material:** Structured data in JSON format (name, address, categories, hours, attributes, stars, reviews).
+    *   **Constraints:**
+        *   Based *only* on the provided structured data.
+        *   Include details from customers' reviews.
+        *   Word count: 100 - 200 words.
+        *   No made-up information.
+    *   **Subject:** Corner Tap Room.
+
+2.  **Analyze the Source Data:**
+    *   **Name:** Corner Tap Room
+    *   **Address:** 1905 Cliff Dr, Santa Barbara, CA
+    *   **Categories:** Restaurants, Gastropubs, Cocktail Bars, Bars, American (New), Nightlife, Beer Bar, American (Traditional)
+    *   **Hours:** Mon-Thu 16:0-21:0, Fri-Sat 12:0-22:0, Sun 10:0-20:0.
+    *   **Attributes:** Parking (Lot: True), Outdoor Seating (True), Takeout (True), Reservations (False), WiFi (None).
+    *   **Stars:** 5.0
+    *   **Reviews:**
+        *   Review 1 (5 stars): Great meal, Teriyaki Sliders, friendly atmosphere, great beers.
+        *   Review 2 (4 stars): Good location, nice outside ambiance, great service, meat lovers flatbread amazing (prosciutto not a fan), kids pasta spicy, decent mojito.
+        *   Review 3 (3 stars): Welcome addition, friendly staff, wine prices too high ($16 glass), cauliflower hot/tasty, flat bread cold/cheese not toasted, order one dish at a time.
+
+3.  **Drafting - Step 1 (Information Gathering):**
+    *   Name: Corner Tap Room.
+    *   Location: 1905 Cliff Dr, Santa Barbara, CA.
+    *   Type: Gastropub, Bar, Restaurant.
+    *   Hours: Mon-Thu 4pm-9pm, Fri-Sat 12pm-10pm, Sun 10am-8pm.
+    *   Parking: Lot available.
+    *   Features: Outdoor seating, takeout.
+    *   Ratings: 5.0 stars.
+    *   Review Highlights:
+        *   Positives: Friendly staff, great beer selection, Teriyaki Sliders, Meat Lovers Flatbread, nice outside ambiance, good service.
+        *   Negatives/Warnings: Wine prices high ($16 glass), cauliflower dish might be cold (reviewer noted hot and tasty but flat bread cold), kids pasta too spicy, prosciutto flatbread not liked.
+
+4.  **Drafting - Step 2 (Writing & Checking Constraints):**
+    *   *Constraint Check:* Must be 100-200 words. Must not make up info. Must include review details.
+
+    *   *Draft 1:*
+        Corner Tap Room is a highly-rated gastropub situated at 1905 Cliff Dr in Santa Barbara, CA. The establishment offers American cuisine and drinks, operating from 16:00 to 21:00 on weekdays, extending to 12:00-22:00 on weekends, and 10:00-20:00 on Sundays. It features outdoor seating and on-site parking.
+
+        Customer reviews highlight a mix of experiences. Many praise the friendly staff and inviting atmosphere, noting a strong selection of beers. Specific food items like the Teriyaki Sliders and Meat Lovers Flatbread are frequently recommended. However, opinions vary on the menu. One reviewer found the kids pasta unexpectedly spicy and the prosciutto flatbread lacking. Another noted that while the cauliflower dish was tasty, the flat bread arrived cold with cheese not toasted.
+
+        Additionally, wine prices are a point of contention. A customer paid $16 for a glass of Qupe Chardonnay, describing it as overpriced. Despite some reservations regarding wine costs and specific dish temperatures, the business maintains a 5.0-star rating. Visitors suggest ordering one dish at a time and visiting on rainy days for a perfect spot.
+
+    *   *Word Count Check:* 168 words.
+    *   *Accuracy Check:*
+        *   Address: Correct.
+        *   Hours: Correct.
+        *   Parking: Correct (Lot: True).
+        *   Outdoor: Correct.
+        *   Review 1: Teriyaki Sliders, beers, friendly. Included.
+        *   Review 2: Meat lovers flatbread amazing, kids pasta spicy, prosciutto not fan. Included.
+        *   Review 3: Wine high ($16), cauliflower hot/tasty, flat bread cold. Included.
+        *   Stars: 5.0. Included.
+        *   No made-up info: Looks good. (Wait, I mentioned "rainy days" in the last sentence based on Review 1 saying "looking for a good meal on a rainy night and found the perfect spot". This is technically in the review text, so it's allowed.)
+        *   Wait, I need to check the word count again.
+        *   Draft 1 count: ~170 words.
+        *   Constraint: 100-200 words.
+        *   Constraint: Objective overview.
+
+    *   *Refining for Flow and Accuracy:*
+        *   Ensure I don't imply the 5.0 stars is the average if the reviews show 5, 4, and 3. The data says `business_stars`: 5.0. So I can state the overall rating is 5.0.
+        *   Ensure I mention the categories or type accurately.
+        *   Ensure I don't contradict the "kids pasta" review vs "cauliflower" review.
+        *   Make sure the parking info is accurate (Lot: True).
+
+    *   *Draft 2 (Polishing):*
+        Corner Tap Room is a highly-rated gastropub located at 1905 Cliff Dr in Santa Barbara, CA. Operating from 16:00 to 21:00 on weekdays and 12:00 to 22:00 on weekends, the venue offers American cuisine and drinks with outdoor seating and lot parking. It maintains a 5.0-star rating based on customer feedback.
+
+        Reviews highlight the friendly staff and excellent beer selection as key strengths. Specific menu items like the Teriyaki Sliders and Meat Lovers Flatbread are frequently praised. However, dining experiences vary. One guest found the kids pasta unexpectedly spicy and disliked the prosciutto flatbread. Another noted that while the cauliflower dish was tasty, the flat bread arrived cold with cheese not toasted. Additionally, wine prices are a concern; a customer paid $16 for a glass of Qupe Chardonnay. Despite mixed opinions on specific dishes and wine costs, visitors recommend the location for its atmosphere and service, suggesting ordering one dish at a time to avoid issues.
+
+    *   *Word Count Check:* 173 words.
+    *   *Content Check:*
+        *   Name/Address: Included.
+        *   Hours: Included.
+        *   Parking/Outdoor: Included.
+        *   Rating: Included.
+        *   Review 1: Teriyaki Sliders, beers, atmosphere. Included.
+        *   Review 2: Meat lovers flatbread, kids pasta spicy, prosciutto. Included.
+        *   Review 3: Wine price $16, cauliflower, flat bread cold. Included.
+        *   No hallucinations.
+
+    *   *Final Review:* Looks solid. Fits the constraints.
+
+5.  **Final Word Count Verification:**
+    "Corner Tap Room is a highly-rated gastropub located at 1905 Cliff Dr in Santa Barbara, CA. Operating from 16:00 to 21:00 on weekdays and 12:00 to 22:00 on weekends, the venue offers American cuisine and drinks with outdoor seating and lot parking. It maintains a 5.0-star rating based on customer feedback.
+
+    Reviews highlight the friendly staff and excellent beer selection as key strengths. Specific menu items like the Teriyaki Sliders and Meat Lovers Flatbread are frequently praised. However, dining experiences vary. One guest found the kids pasta unexpectedly spicy and disliked the prosciutto flatbread. Another noted that while the cauliflower dish was tasty, the flat bread arrived cold with cheese not toasted. Additionally, wine prices are a concern; a customer paid $16 for a glass of Qupe Chardonnay. Despite mixed opinions on specific dishes and wine costs, visitors recommend the location for its atmosphere and service, suggesting ordering one dish at a time to avoid issues."
+
+    Count: 173 words. Perfect.
+
+6.  **Final Polish:** Just ensure "lot parking" is clear. The data says `BusinessParking`: `lot`: True. So "lot parking" is accurate.
+
+    Wait, I should check the hours again.
+    Mon-Thu: 16:0-21:0
+    Fri-Sat: 12:0-22:0
+    Sun: 10:0-20:0
+    My draft says: "Operating from 16:00 to 21:00 on weekdays and 12:00 to 22:00 on weekends".
+    This generalizes Mon-Thu as weekdays and Fri-Sat as weekends. Sunday is 10:00-20:00, which is different from 12:00-22:00.
+    I should be more precise to avoid "making up" info or inaccuracy.
+    Correction: "Operating from 16:00 to 21:00 on Monday through Thursday, 12:00 to 22:00 on Friday and Saturday, and 10:00 to 20:00 on Sunday."
+    This adds words but ensures accuracy.
+
+    Revised Sentence: "Operating from 16:00 to 21:00 on Monday through Thursday, 12:00 to 22:00 on Friday and Saturday, and 10:00 to 20:00 on Sunday, the venue offers American cuisine and drinks with outdoor seating and lot parking."
+    Word count impact: +11 words.
+    New Total: ~184 words. Still within 100-200 range.
+
+    Let's re-verify the word count.
+    Corner (1) Tap (2) Room (3) is (4) a (5) highly-rated (6) gastropub (7) located (8) at (9) 1905 (10) Cliff (11) Dr (12) in (13) Santa (14) Barbara, (15) CA. (16)
+    Operating (17) from (18) 16:00 (19) to (20) 21:00 (21) on (22) Monday (23) through (24) Thursday, (25) 12:00 (26) to (27) 22:00 (28) on (29) Friday (30) and (31) Saturday, (32) and (33) 10:00 (34) to (35) 20:00 (36) on (37) Sunday, (38) the (39) venue (40) offers (41) American (42) cuisine (43) and (44) drinks (45) with (46) outdoor (47) seating (48) and (49) lot (50) parking. (51)
+    It (52) maintains (53) a (54) 5.0-star (55) rating (56) based (57) on (58) customer (59) feedback. (60)
+
+    Reviews (61) highlight (62) the (63) friendly (64) staff (65) and (66) excellent (67) beer (68) selection (69) as (70) key (71) strengths. (72)
+    Specific (73) menu (74) items (75) like (76) the (77) Teriyaki (78) Sliders (79) and (80) Meat (81) Lovers (82) Flatbread (83) are (84) frequently (85) praised. (86)
+    However, (87) dining (88) experiences (89) vary. (90)
+    One (91) guest (92) found (93) the (94) kids (95) pasta (96) unexpectedly (97) spicy (98) and (99) disliked (100) the (101) prosciutto (102) flatbread. (103)
+    Another (104) noted (105) that (106) while (107) the (108) cauliflower (109) dish (110) was (111) tasty, (112) the (113) flat (114) bread (115) arrived (116) cold (117) with (118) cheese (119) not (120) toasted. (121)
+    Additionally, (122) wine (123) prices (124) are (125) a (126) concern; (127) a (128) customer (129) paid (130) $16 (131) for (132) a (133) glass (134) of (135) Qupe (136) Chardonnay. (137)
+    Despite (138) mixed (139) opinions (140) on (141) specific (142) dishes (143) and (144) wine (145) costs, (146) visitors (147) recommend (148) the (149) location (150) for (151) its (152) atmosphere (153) and (154) service, (155) suggesting (156) ordering (157) one (158) dish (159) at (160) a (161) time (162) to (163) avoid (164) issues. (165)
+
+    Wait, I need to check the review details again.
+    Review 1 says "We were looking for a good meal on a rainy night...". My draft doesn't explicitly mention the rainy night, just "atmosphere". I can add "perfect spot on a rainy night" to be more specific to the data.
+    Review 3 says "If you go, avoid wine and order one dish at a time!". My draft says "suggesting ordering one dish at a time to avoid issues".
+    Review 2 says "Good location on the Mesa".
+    I should check if I need to mention "Mesa". The address is "1905 Cliff Dr". The review says "Good location on the Mesa". This implies the neighborhood. I can add "good location on the Mesa".
+    Also, I need to ensure I don't exceed 200 words.
+    Current count is around 165 words. I have room to add specific review details like "rainy night" and "Mesa".
+    Let's adjust to ensure accuracy and detail without going over.
+
+    Revised Plan:
+    1. Name/Address/Type.
+    2. Hours (Precise).
+    3. Parking/Outdoor.
+    4. Rating.
+    5. Review 1 (Rainy night, Teriyaki, Beer).
+    6. Review 2 (Mesa location, Meat Lovers, Kids pasta spicy).
+    7. Review 3 (Wine price, Cauliflower, Flat bread cold).
+    8. Conclusion.
+
+    Let's write the final version.
+
+    Corner Tap Room is a highly-rated gastropub located at 1905 Cliff Dr in Santa Barbara, CA. Operating from 16:00 to 21:00 on Monday through Thursday, 12:00 to 22:00 on Friday and Saturday, and 10:00 to 20:00 on Sunday, the venue offers American cuisine and drinks with outdoor seating and lot parking. It maintains a 5.0-star rating based on customer feedback.
+
+    Reviews highlight the friendly staff and excellent beer selection as key strengths. One guest found the Teriyaki Sliders great on a rainy night. Another noted the good location on the Mesa and praised the Meat Lovers Flatbread, though the kids pasta was unexpectedly spicy. A third visitor paid $16 for a glass of Qupe Chardonnay, calling wine prices too high. While the cauliflower dish was tasty, the flat bread arrived cold with cheese not toasted. Despite mixed opinions on specific dishes and wine costs, visitors recommend the location for its atmosphere and service, suggesting ordering one dish at a time to avoid issues.
+
+    Word Count Check:
+    Corner (1) Tap (2) Room (3) is (4) a (5) highly-rated (6) gastropub (7) located (8) at (9) 1905 (10) Cliff (11) Dr (12) in (13) Santa (14) Barbara, (15) CA. (16)
+    Operating (17) from (18) 16:00 (19) to (20) 21:00 (21) on (22) Monday (23) through (24) Thursday, (25) 12:00 (26) to (27) 22:00 (28) on (29) Friday (30) and (31) Saturday, (32) and (33) 10:00 (34) to (20:00 (35) on (36) Sunday, (37) the (38) venue (39) offers (40) American (41) cuisine (42) and (43) drinks (44) with (45) outdoor (46) seating (47) and (48) lot (49) parking. (50)
+    It (51) maintains (52) a (53) 5.0-star (54) rating (55) based (56) on (57) customer (58) feedback. (59)
+
+    Reviews (60) highlight (61) the (62) friendly (63) staff (64) and (65) excellent (66) beer (67) selection (68) as (69) key (70) strengths. (71)
+    One (72) guest (73) found (74) the (75) Teriyaki (76) Sliders (77) great (78) on (79) a (80) rainy (81) night. (82)
+    Another (83) noted (84) the (85) good (86) location (87) on (88) the (89) Mesa (90) and (91) praised (92) the (93) Meat (94) Lovers (95) Flatbread, (96) though (97) the (98) kids (99) pasta (100) was (101) unexpectedly (102) spicy. (103)
+    A (104) third (105) visitor (106) paid (107) $16 (108) for (109) a (110) glass (111) of (112) Qupe (113) Chardonnay, (114) calling (115) wine (116) prices (117) too (118) high. (119)
+    While (120) the (121) cauliflower (122) dish (123) was (124) tasty, (125) the (126) flat (127) bread (128) arrived (129) cold (130) with (131) cheese (132) not (133) toasted. (134)
+    Despite (135) mixed (136) opinions (137) on (138) specific (139) dishes (140) and (141) wine (142) costs, (143) visitors (144) recommend (145) the (146) location (147) for (148) its (149) atmosphere (150) and (151) service, (152) suggesting (153) ordering (154) one (155) dish (156) at (157) a (158) time (159) to (160) avoid (161) issues. (162)
+
+    Total: 162 words.
+    Wait, I missed the "Teriyaki Sliders" in the count in my manual check above? I wrote "Teriyaki Sliders great". Yes, I counted them.
+    Wait, I need to check the hours again. "10:00 to 20:00" in the text vs "10:00 to 20:00".
+    Text: "10:00 to 20:00".
+    My draft: "10:00 to 20:00".
+    Okay.
+    Is 162 words between 100 and 200? Yes.
+    Is it objective? Yes.
+    Is it based only on provided data? Yes.
+    Does it include review details? Yes (Rainy night, Teriyaki Sliders, Mesa, Meat Lovers, Kids pasta, $16 wine, Cauliflower, Flat bread cold).
+
+    One small correction: "10:00 to 20:00" in the text I wrote in the count check was "20:00". In the draft text above I wrote "20:00".
+    Wait, I see "10:00 to 20:00" in the draft.
+    Okay, looks good.
+    Wait, one more check: "Monday through Thursday". The data says Mon, Tue, Wed, Thu. "Monday through Thursday" covers that.
+    "Friday and Saturday". Data says Fri, Sat.
+    "Sunday". Data says Sun.
+    Okay.
+
+    Final check on word count.
+    Corner Tap Room is a highly-rated gastropub located at 1905 Cliff Dr in Santa Barbara, CA. (16)
+    Operating from 16:00 to 21:00 on Monday through Thursday, 12:00 to 22:00 on Friday and Saturday, and 10:00 to 20:00 on Sunday, the venue offers American cuisine and drinks with outdoor seating and lot parking. (35)
+    It maintains a 5.0-star rating based on customer feedback. (10)
+    Reviews highlight the friendly staff and excellent beer selection as key strengths. (13)
+    One guest found the Teriyaki Sliders great on a rainy night. (12)
+    Another noted the good location on the Mesa and praised the Meat Lovers Flatbread, though the kids pasta was unexpectedly spicy. (20)
+    A third visitor paid $16 for a glass of Qupe Chardonnay, calling wine prices too high. (15)
+    While the cauliflower dish was tasty, the flat bread arrived cold with cheese not toasted. (15)
+    Despite mixed opinions on specific dishes and wine costs, visitors recommend the location for its atmosphere and service, suggesting ordering one dish at a time to avoid issues. (24)
+
+    Total: 16+35+10+13+12+20+15+15+24 = 160 words.
+    Wait, let's recount the first sentence carefully.
+    Corner (1) Tap (2) Room (3) is (4) a (5) highly-rated (6) gastropub (7) located (8) at (9) 1905 (10) Cliff (11) Dr (12) in (13) Santa (14) Barbara, (15) CA. (16)
+    Second sentence:
+    Operating (1) from (2) 16:00 (3) to (4) 21:00 (5) on (6) Monday (7) through (8) Thursday, (9) 12:00 (10) to (11) 22:00 (12) on (13) Friday (14) and (15) Saturday, (16) and (17) 10:00 (18) to (19) 20:00 (20) on (21) Sunday, (22) the (23) venue (24) offers (25) American (26) cuisine (27) and (28) drinks (29) with (30) outdoor (31) seating (32) and (33) lot (34) parking. (35)
+    Third sentence:
+    It (1) maintains (2) a (3) 5.0-star (4) rating (5) based (6) on (7) customer (8) feedback. (9)
+    Fourth sentence:
+    Reviews (1) highlight (2) the (3) friendly (4) staff (5) and (6) excellent (7) beer (8) selection (9) as (10) key (11) strengths. (12)
+    Fifth sentence:
+    One (1) guest (2) found (3) the (4) Teriyaki (5) Sliders (6) great (7) on (8) a (9) rainy (10) night. (11)
+    Sixth sentence:
+    Another (1) noted (2) the (3) good (4) location (5) on (6) the (7) Mesa (8) and (9) praised (10) the (11) Meat (12) Lovers (13) Flatbread, (14) though (15) the (16) kids (17) pasta (18) was (19) unexpectedly (20) spicy. (21)
+    Seventh sentence:
+    A (1) third (2) visitor (3) paid (4) $16 (5) for (6) a (7) glass (8) of (9) Qupe (10) Chardonnay, (11) calling (12) wine (13) prices (14) too (15) high. (16)
+    Eighth sentence:
+    While (1) the (2) cauliflower (3) dish (4) was (5) tasty, (6) the (7) flat (8) bread (9) arrived (10) cold (11) with (12) cheese (13) not (14) toasted. (15)
+    Ninth sentence:
+    Despite (1) mixed (2) opinions (3) on (4) specific (5) dishes (6) and (7) wine (8) costs, (9) visitors (10) recommend (11) the (12) location (13) for (14) its (15) atmosphere (16) and (17) service, (18) suggesting (19) ordering (20) one (21) dish (22) at (23) a (24) time (25) to (26) avoid (27) issues. (28)
+
+    Sum: 16 + 35 + 9 + 12 + 11 + 21 + 16 + 15 + 28 = 163 words.
+    This is safely within the 100-200 word range.
+    All constraints met.
+    Ready to output.
+</think>
+
+Corner Tap Room is a highly-rated gastropub located at 1905 Cliff Dr in Santa Barbara, CA. Operating from 16:00 to 21:00 on Monday through Thursday, 12:00 to 22:00 on Friday and Saturday, and 10:00 to 20:00 on Sunday, the venue offers American cuisine and drinks with outdoor seating and lot parking. It maintains a 5.0-star rating based on customer feedback.
+
+Reviews highlight the friendly staff and excellent beer selection as key strengths. One guest found the Teriyaki Sliders great on a rainy night. Another noted the good location on the Mesa and praised the Meat Lovers Flatbread, though the kids pasta was unexpectedly spicy. A third visitor paid $16 for a glass of Qupe Chardonnay, calling wine prices too high. While the cauliflower dish was tasty, the flat bread arrived cold with cheese not toasted. Despite mixed opinions on specific dishes and wine costs, visitors recommend the location for its atmosphere and service, suggesting ordering one dish at a time to avoid issues.

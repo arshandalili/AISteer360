@@ -1,0 +1,25 @@
+thought
+1.  **Analyze the Request:** The user wants a brief answer on "how to soak off gel polish," strictly based on the provided three passages. If the information is missing, I must reply with "Unable to answer based on given passages."
+
+2.  **Scan Passages for Removal Instructions:**
+
+    *   **Passage 1:** Mentions "an easy removal process" but gives no steps.
+    *   **Passage 2:** Provides detailed steps:
+        1.  (Implied step 1: Break through the top coat.)
+        2.  Soak a cotton ball with acetone remover and place it on the nail.
+        3.  Wrap the finger with the cotton ball in foil, squeezing tightly.
+        4.  Remove the foil. (Polish should be visibly coming loose.)
+        5.  Push the polish off using an orange stick or cuticle pusher. (Caution: Don't use anything too sharp.)
+        6.  Repeat for each nail.
+    *   **Passage 3:** States that Gelish "soaks completely off in only 10 - 15 minutes" but does not provide the step-by-step method.
+
+3.  **Synthesize the Answer:** Passage 2 contains the complete, actionable instructions for soaking off the polish.
+
+4.  **Draft the Response (Ensuring Brevity and Accuracy):** (Use the steps from Passage 2.)
+
+5.  **Final Review:** Does the answer strictly use the provided text? Yes. Is it brief? Yes. (The drafted response is ready.)1. Break through the top coat to allow the remover to penetrate the layers of polish below.
+2. Soak a cotton ball with the acetone remover and place it on one of the fingernails.
+3. Wrap the finger with the cotton ball in foil, and squeeze it nice and tight so that the cotton ball stays in contact with the nail.
+4. Remove the foil.
+5. Push the polish off of the nail using your orange stick or cuticle pusher, ensuring you do not use anything too sharp.
+6. Repeat this step for each nail.

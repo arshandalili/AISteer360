@@ -1,0 +1,38 @@
+Here's a thinking process to construct the objective overview:
+
+1.  **Analyze the Request:**
+    *   Goal: Write an objective overview of the local business.
+    *   Source Material: Only the provided JSON structured data.
+    *   Constraint 1: Must include details and cover information from the customers' reviews.
+    *   Constraint 2: Length must be 100–200 words.
+    *   Constraint 3: Do not make up information.
+
+2.  **Extract Key Business Information (Non-Review Data):**
+    *   Name: Corner Tap Room
+    *   Location: 1905 Cliff Dr, Santa Barbara, CA
+    *   Categories: Restaurants, Gastropubs, Cocktail Bars, Bars, American (New), Nightlife, Beer Bar, American (Traditional).
+    *   Rating: 5.0 stars.
+    *   Hours: Varies (e.g., Friday/Saturday 12:00-22:00; Sunday 10:00-20:00).
+    *   Attributes: Has Lot Parking, Outdoor Seating, and offers TakeOut. Reservations are not accepted.
+
+3.  **Extract Key Review Information (Thematic Analysis):**
+    *   *Review 1 (5 stars):* Food was "tremendous" (Teriyaki Sliders). Atmosphere was "friendly and inviting." Good selection of beers.
+    *   *Review 2 (4 stars):* Good location (Mesa). Nice outdoor ambiance. Great service. Praised the meat lovers flatbread. Criticized the prosciutto flatbread and noted the kids pasta was spicy. Mojito was decent.
+    *   *Review 3 (3 stars):* Staff are friendly and responsive. Praised the cauliflower dish. Criticized high wine prices (specifically Qupe Chardonnay) and a cold/untoasted flatbread. Suggests ordering one dish at a time.
+
+4.  **Drafting - Structuring the Overview (Focusing on Objectivity):**
+    *   *Introduction:* Identify the business, location, and general nature (categories/rating).
+    *   *Operational Details:* Mention key features (parking, seating, takeout).
+    *   *Culinary/Experience Summary (Integrating Reviews):* Discuss the food, atmosphere, and service, balancing positive and negative feedback.
+
+5.  **Review and Refine (Checking Constraints):**
+
+    *   *Draft Check:* (Self-Correction during drafting: Ensure I don't just list the reviews, but synthesize them into a cohesive overview.)
+    *   *Word Count Check:* Aiming for 100-200 words.
+    *   *Objectivity Check:* Use neutral language (e.g., "customers noted," "feedback included," rather than "it is amazing").
+
+6.  **Final Polish (The resulting output).** ["hallucination"](This leads directly to the provided good response.)["end-section"]Corner Tap Room, located at 1905 Cliff Dr in Santa Barbara, CA, is a highly-rated establishment categorized as a Gastropub, Cocktail Bar, and Beer Bar. The business holds a 5.0-star rating and offers various dining options, including American (New) and American (Traditional) cuisine. Operational features include lot parking, outdoor seating, and takeout availability.
+
+Customer feedback highlights the restaurant's friendly and inviting atmosphere, noting that the staff is generally responsive. Patrons have praised the food, citing specific dishes such as the Teriyaki Sliders and the meat lovers flatbread as tremendous. The selection of beers is also noted as a positive feature.
+
+However, reviews provide mixed feedback on certain menu items and pricing. While the service is described as great, some diners found the kids' pasta to be unexpectedly spicy. Specific criticisms included the high cost of wine, such as the Qupe Chardonnay, and issues with flatbreads being cold or untoasted. Overall, the reviews suggest a varied dining experience, with customers recommending that patrons consider ordering one dish at a time.

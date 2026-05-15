@@ -1,0 +1,23 @@
+thought
+1.  **Analyze the Request:** The user wants to know how to remove a row in Word, based *strictly* on the provided three passages. The answer must be brief.
+
+2.  **Scan Passages for "Remove/Delete a Row":**
+
+    *   **Passage 1:** Mentions "Add or delete a table column or row." It says: "To add or delete columns and rows, right-click a row or column, and then click the command you want." (This is a general method).
+    *   **Passage 2:** Focuses on deleting a row. It mentions: "select the row, and hit [shortcut]." (The specific shortcut is missing/unclear in the provided text snippet, but the action is described).
+    *   **Passage 3:** Focuses on deleting a row. It provides two methods:
+        1.  Keyboard shortcut: "select the row, and hit [shortcut]." (Again, the specific shortcut is missing/unclear).
+        2.  Right-click method: "Right-click in a cell inside the row you would like to delete. From the context menu that opens, choose Delete Cells, and the Delete Cells dialog box will open. By default, Shift cells left is selected, so you first need to choose the Delete entire row option-then hit [Enter/OK]."
+
+3.  **Synthesize the Answer (Focusing on clear, actionable steps):**
+
+    *   Method 1 (General/P1): Right-click a row and click the desired command.
+    *   Method 2 (P3 - Detailed): Right-click in a cell inside the row you want to delete, choose Delete Cells, and then select the Delete entire row option.
+
+4.  **Draft the Brief Response:** Combine the clearest instructions.
+
+5.  **Final Review against Constraints:**
+    *   Briefly answer the question? Yes.
+    *   Strictly based on the three passages? Yes.
+
+6.  **Select the best phrasing:** (Using the right-click method from Passage 3 as it is the most detailed instruction provided.)You can right-click a row and click the desired command. Alternatively, right-click in a cell inside the row you want to delete, choose Delete Cells, and then select the Delete entire row option.

@@ -1,0 +1,390 @@
+
+Corner Tap Room, located at 1905 Cliff Dr in Santa Barbara, CA, is a popular dining and nightlife destination. It is a versatile spot offering a range of dining options, including American (New) cuisine, American (Traditional) dishes, and a variety of beverages such as cocktails and craft beers. The restaurant offers outdoor seating and allows takeout orders, making it convenient for customers.
+
+<think>
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   **Task:** Write an objective overview of a local business.
+    *   **Source Material:** Only the provided structured data in JSON format.
+    *   **Content:** Include details and cover information mentioned in customers' reviews.
+    *   **Length:** 100 - 200 words.
+    *   **Constraint:** Do not make up information.
+    *   **Input Data:**
+        *   Name: Corner Tap Room
+        *   Address: 1905 Cliff Dr, Santa Barbara, CA
+        *   Categories: Restaurants, Gastropubs, Cocktail Bars, Bars, American (New), Nightlife, Beer Bar, American (Traditional)
+        *   Hours: Mon-Sun (varies, closed Mon 0:0-0:0)
+        *   Attributes: Parking (lot), Outdoor Seating, Takeout, Reservations (No), WiFi (None).
+        *   Rating: 5.0 stars (Note: This seems like an average or a specific field, but reviews show 5.0, 4.0, 3.0. I should reflect the reviews accurately).
+        *   Reviews: 3 reviews provided (5 stars, 4 stars, 3 stars).
+
+2.  **Analyze the Reviews:**
+    *   Review 1 (5 stars): Good meal on rainy night, Teriyaki Sliders, friendly/inviting atmosphere, great beers.
+    *   Review 2 (4 stars): Good location on the Mesa, nice outside ambiance, great service, Meat Lovers Flatbread amazing, Prosciutto flatbread not liked, Kids pasta spicy, Mojito decent.
+    *   Review 3 (3 stars): Welcome addition to Mesa, friendly staff, Wine prices too high (Qupe Chardonnay $16), Cauliflower hot/tasty, Flat bread cold/cheese not toasted, advise ordering one dish at a time.
+
+    *Correction/Refinement on Location:* The JSON says 'city': 'Santa Barbara', but the reviews explicitly mention "Mesa". This is a common discrepancy in datasets (sometimes City is wrong, sometimes reviews reflect the actual location). However, the instruction says "based only on the provided structured data". The structured data says 'Santa Barbara'. The reviews say "Mesa". I need to be careful. Usually, I should prioritize the explicit data fields for the address but acknowledge the location context from reviews if it adds detail, or stick strictly to the JSON. The instruction says "based only on the provided structured data". If the JSON says Santa Barbara, I should write Santa Barbara. However, the reviews mention Mesa. This is a conflict. To be safe and objective based *only* on the data, I will use the official address provided in the JSON (Santa Barbara) but I can mention the reviews' sentiment. Wait, if I say Santa Barbara and the reviews say Mesa, it might look contradictory. However, the instruction says "based only on the provided structured data". The structured data explicitly lists 'city': 'Santa Barbara'. I must use that. I cannot invent that it is in Mesa, even if reviews say so. I will stick to the JSON for the address.
+
+    *Wait, looking closer at the prompt:* "based only on the provided structured data in the JSON format."
+    The JSON says: 'city': 'Santa Barbara'.
+    The reviews say: "Mesa".
+    If I write "Santa Barbara", I am using the data. If I write "Mesa", I am using the text data within the JSON object (review_text).
+    To be safe, I will use the main JSON fields for the location details (Santa Barbara) as that is the official business info, but I can mention the reviews' specific feedback.
+
+3.  **Drafting the Overview:**
+    *   *Goal:* 100-200 words.
+    *   *Content:* Business info + Review details (food, service, drinks, parking, etc.).
+    *   *Drafting:*
+        Corner Tap Room is located at 1905 Cliff Dr in Santa Barbara, CA. It operates as a restaurant, gastropub, and cocktail bar serving American (New) and American (Traditional) cuisine. The establishment offers outdoor seating and takeout options, though reservations are not accepted. Parking is available on the lot. Hours vary, with Saturday and Sunday opening at 12:00 and closing at 22:00, while Monday is closed.
+
+        Customer feedback highlights varied experiences. One reviewer praised the Teriyaki Sliders and friendly atmosphere, noting the availability of great beers. Another guest appreciated the location and service, specifically mentioning the Meat Lovers Flatbread, though they found the kids' pasta overly spicy. Wine prices received mixed reviews, with one customer finding a glass of Chardonnay expensive and noting the flatbread could be cold. Overall, the venue is rated 5.0 stars. Staff are generally described as friendly and responsive. While some guests suggest ordering one dish at a time to avoid issues with temperature, others found the ambiance inviting.
+
+    *Word Count Check:*
+    1. Corner (1) Tap (2) Room (3) is (4) located (5) at (6) 1905 (7) Cliff (8) Dr (9) in (10) Santa (11) Barbara, (12) CA. (13)
+    2. It (14) operates (15) as (16) a (17) restaurant, (18) gastropub, (19) and (20) cocktail (21) bar (22) serving (23) American (24) (25) New (26) and (27) American (28) (29) Traditional (30) cuisine. (31)
+    3. The (32) establishment (33) offers (34) outdoor (35) seating (36) and (37) takeout (38) options, (39) though (40) reservations (41) are (42) not (43) accepted. (44)
+    4. Parking (45) is (46) available (47) on (48) the (49) lot. (50)
+    5. Hours (51) vary, (52) with (53) Saturday (54) and (55) Sunday (56) opening (57) at (58) 12:00 (59) and (60) closing (61) at (62) 22:00, (63) while (64) Monday (65) is (66) closed. (67)
+
+    6. Customer (68) feedback (69) highlights (70) varied (71) experiences. (72)
+    7. One (73) reviewer (74) praised (75) the (76) Teriyaki (77) Sliders (78) and (79) friendly (80) atmosphere, (81) noting (82) the (83) availability (84) of (85) great (86) beers. (87)
+    8. Another (88) guest (89) appreciated (90) the (91) location (92) and (93) service, (94) specifically (95) mentioning (96) the (97) Meat (98) Lovers (99) Flatbread, (100) though (101) they (102) found (103) the (104) kids' (105) pasta (106) overly (107) spicy. (108)
+    9. Wine (109) prices (110) received (111) mixed (112) reviews, (113) with (114) one (115) customer (116) finding (117) a (118) glass (119) of (120) Chardonnay (121) expensive (122) and (123) noting (124) the (125) flatbread (126) could (127) be (128) cold. (129)
+    10. Overall, (130) the (131) venue (132) is (133) rated (134) 5.0 (135) stars. (136)
+    11. Staff (137) are (138) generally (139) described (140) as (141) friendly (142) and (143) responsive. (144)
+    12. While (145) some (146) guests (147) suggest (148) ordering (149) one (150) dish (151) at (152) a (153) time (154) to (155) avoid (156) issues (157) with (158) temperature, (159) others (160) found (161) the (162) ambiance (163) inviting. (164)
+
+    *Current Count:* ~164 words.
+    *Constraint Check:* 100-200 words. OK.
+    *Constraint Check:* Objective? Yes.
+    *Constraint Check:* Based only on provided data? Yes. (I used Santa Barbara from JSON, but I need to be careful about "Mesa". The JSON says Santa Barbara. The reviews say Mesa. I will stick to the JSON address for the official location, but I can't ignore the reviews. I'll mention the reviews' location context if it fits, but to be safe on "only structured data", I should prioritize the JSON fields for the business address. However, the instruction says "cover the information mentioned in the customers' review". So I must mention Mesa if the review says it. But the JSON says Santa Barbara. This is a conflict. I will write Santa Barbara as per the JSON 'city' field, as that defines the business. I will not explicitly claim it is in Mesa to avoid hallucination/contradiction with the official address field, but I will mention the reviews' content.)
+    *Wait, actually:* If I say "located at 1905 Cliff Dr in Santa Barbara" and the review says "Good location on the Mesa", it might confuse. But I cannot make up that it is in Mesa if the JSON says Santa Barbara. I will stick to the JSON for the address. I will summarize the review sentiments without explicitly validating the "Mesa" claim as the official city if it contradicts the JSON, or I can just refer to the reviews' comments without repeating the location name if it conflicts. However, the instruction says "cover the information mentioned in the customers' review". I should mention the food items and general sentiments.
+    *Correction:* I need to check the word count again.
+    Let's refine the draft to ensure it flows well and hits the word count.
+
+    *Revised Draft:*
+    Corner Tap Room is located at 1905 Cliff Dr in Santa Barbara, CA. It operates as a restaurant, gastropub, and cocktail bar serving American (New) and American (Traditional) cuisine. The establishment offers outdoor seating and takeout options, though reservations are not accepted. Parking is available on the lot. Hours vary, with Saturday and Sunday opening at 12:00 and closing at 22:00, while Monday is closed.
+
+    Customer feedback highlights varied experiences. One reviewer praised the Teriyaki Sliders and friendly atmosphere, noting the availability of great beers. Another guest appreciated the service, specifically mentioning the Meat Lovers Flatbread, though they found the kids' pasta overly spicy. Wine prices received mixed reviews, with one customer finding a glass of Chardonnay expensive and noting the flatbread could be cold. Overall, the venue is rated 5.0 stars. Staff are generally described as friendly and responsive. While some guests suggest ordering one dish at a time to avoid temperature issues, others found the ambiance inviting. The business caters to nightlife and beer enthusiasts seeking a variety of beverages.
+
+    *Word Count Check:* 178 words.
+    *Check:* Does it mention "Mesa"? No, but the JSON says Santa Barbara. I should probably not mention Mesa if the JSON says Santa Barbara, to avoid contradicting the primary data source, although the review text is part of the structured data. The instruction says "based only on the provided structured data". The JSON has 'city': 'Santa Barbara'. The review text is part of the structured data. I can mention the review text content. I will avoid explicitly saying "Mesa" to prevent confusion with the official address field, but I will mention the specific food items and sentiments from the reviews.
+    *Wait, one more check:* The instruction says "cover the information mentioned in the customers' review". If I don't mention the location mentioned in the review ("Mesa"), am I missing information? The JSON says Santa Barbara. I will stick to Santa Barbara as the official address. I will focus on the food/drink/service details from reviews.
+    *Wait, checking the word count again.*
+    Paragraph 1: 67 words.
+    Paragraph 2: 111 words.
+    Total: 178 words.
+    Range: 100-200.
+    Perfect.
+
+    *Wait, one detail:* The JSON says 'business_stars': 5.0. But the reviews have 5.0, 4.0, 3.0. The average of 5, 4, 3 is 4.0. The JSON field 'business_stars' says 5.0. I should probably use the JSON field 'business_stars' as it represents the official rating, or mention the reviews' ratings. The instruction says "based only on the provided structured data". I will use the 5.0 stars from the JSON field but acknowledge the mixed feedback in the text.
+    Actually, looking at the JSON: `'business_stars': 5.0`. I will use that.
+    Wait, I need to check if I can mention "Mesa". The reviews are part of the structured data. It is safer to just describe the feedback without validating the city name if it conflicts with the main address field. I'll stick to describing the feedback content (food, service, price).
+
+    *Refining the text for flow and constraints:*
+    Corner Tap Room is located at 1905 Cliff Dr in Santa Barbara, CA. It operates as a restaurant, gastropub, and cocktail bar serving American (New) and American (Traditional) cuisine. The establishment offers outdoor seating and takeout options, though reservations are not accepted. Parking is available on the lot. Hours vary, with Saturday and Sunday opening at 12:00 and closing at 22:00, while Monday is closed.
+
+    Customer feedback highlights varied experiences. One reviewer praised the Teriyaki Sliders and friendly atmosphere, noting the availability of great beers. Another guest appreciated the service, specifically mentioning the Meat Lovers Flatbread, though they found the kids' pasta overly spicy. Wine prices received mixed reviews, with one customer finding a glass of Chardonnay expensive and noting the flatbread could be cold. Overall, the venue is rated 5.0 stars. Staff are generally described as friendly and responsive. While some guests suggest ordering one dish at a time to avoid temperature issues, others found the ambiance inviting. The business caters to nightlife and beer enthusiasts seeking a variety of beverages.
+
+    *Wait, I need to check the word count precisely.*
+    1 Corner
+    2 Tap
+    3 Room
+    4 is
+    5 located
+    6 at
+    7 1905
+    8 Cliff
+    9 Dr
+    10 in
+    11 Santa
+    12 Barbara,
+    13 CA.
+    14 It
+    15 operates
+    16 as
+    17 a
+    18 restaurant,
+    19 gastropub,
+    20 and
+    21 cocktail
+    22 bar
+    23 serving
+    24 American
+    25 (New)
+    26 and
+    27 American
+    28 (Traditional)
+    29 cuisine.
+    30 The
+    31 establishment
+    32 offers
+    33 outdoor
+    34 seating
+    35 and
+    36 takeout
+    37 options,
+    38 though
+    39 reservations
+    40 are
+    41 not
+    42 accepted.
+    43 Parking
+    44 is
+    45 available
+    46 on
+    47 the
+    48 lot.
+    49 Hours
+    50 vary,
+    51 with
+    52 Saturday
+    53 and
+    54 Sunday
+    55 opening
+    56 at
+    57 12:00
+    58 and
+    59 closing
+    60 at
+    61 22:00,
+    62 while
+    63 Monday
+    64 is
+    65 closed.
+
+    66 Customer
+    67 feedback
+    68 highlights
+    69 varied
+    70 experiences.
+    71 One
+    72 reviewer
+    73 praised
+    74 the
+    75 Teriyaki
+    76 Sliders
+    77 and
+    78 friendly
+    79 atmosphere,
+    80 noting
+    81 the
+    82 availability
+    83 of
+    84 great
+    85 beers.
+    86 Another
+    87 guest
+    88 appreciated
+    89 the
+    90 service,
+    91 specifically
+    92 mentioning
+    93 the
+    94 Meat
+    95 Lovers
+    96 Flatbread,
+    97 though
+    98 they
+    99 found
+    100 the
+    101 kids'
+    102 pasta
+    103 overly
+    104 spicy.
+    105 Wine
+    106 prices
+    107 received
+    108 mixed
+    109 reviews,
+    110 with
+    111 one
+    112 customer
+    113 finding
+    114 a
+    115 glass
+    116 of
+    117 Chardonnay
+    118 expensive
+    119 and
+    120 noting
+    121 the
+    122 flatbread
+    123 could
+    124 be
+    125 cold.
+    126 Overall,
+    127 the
+    128 venue
+    129 is
+    130 rated
+    131 5.0
+    132 stars.
+    133 Staff
+    134 are
+    135 generally
+    136 described
+    137 as
+    138 friendly
+    139 and
+    140 responsive.
+    141 While
+    142 some
+    143 guests
+    144 suggest
+    145 ordering
+    146 one
+    147 dish
+    148 at
+    149 a
+    150 time
+    151 to
+    152 avoid
+    153 temperature
+    154 issues,
+    155 others
+    156 found
+    157 the
+    158 ambiance
+    159 inviting.
+    160 The
+    161 business
+    162 caters
+    163 to
+    164 nightlife
+    165 and
+    166 beer
+    167 enthusiasts
+    168 seeking
+    169 a
+    170 variety
+    171 of
+    172 beverages.
+
+    Total: 172 words.
+    Range: 100-200.
+    Constraints: Objective, based on data, covers reviews.
+    Wait, I see "kids' pasta". In the JSON, it's 'kids pasta'. I'll keep 'kids' pasta' or 'kids pasta'.
+    I need to make sure I don't hallucinate. "kids pasta" is in the review. "Teriyaki Sliders" is in the review. "Meat Lovers Flatbread" is in the review. "Chardonnay" is in the review.
+    I removed "Mesa" to avoid conflict with the 'city' field in JSON (Santa Barbara), but the review mentions it. Since the instruction says "based only on the provided structured data", and the JSON 'city' field is a data point, using 'Santa Barbara' is correct. I will not mention 'Mesa' to maintain objectivity regarding the address.
+    Wait, one thing: The review says "Good location on the Mesa". If I don't mention it, I might not be "covering the information mentioned in the customers' review". However, the prompt says "based only on the provided structured data". The structured data includes the JSON fields AND the review text. So I can use the review text. But if I say "Santa Barbara" and the review says "Mesa", it's a contradiction. I will stick to the JSON address for the business location, but I can mention the reviews' feedback about the location without naming the city if it conflicts, or just omit the specific city name from the review if it conflicts with the main data. I will omit "Mesa" to avoid confusion, focusing on the food/drink/service details which are consistent.
+
+    Wait, I need to check if I missed anything.
+    Attributes: WiFi: None. I didn't mention WiFi. I should check if I need to. It's structured data. I can add it to be comprehensive.
+    Attributes: BusinessParking: lot: True. I mentioned parking on the lot.
+    Attributes: OutdoorSeating: True. I mentioned it.
+    Attributes: RestaurantsTakeOut: True. I mentioned it.
+    Attributes: RestaurantsReservations: False. I mentioned it.
+    I should probably add WiFi info if I want to be thorough, but it might add words.
+    Let's check the word count again. 172 words. I have room for 20-30 words.
+    I can add "WiFi is not available" to be complete based on the data.
+    Revised Sentence: "WiFi is not available."
+    Where to put it? After "takeout options".
+    "The establishment offers outdoor seating and takeout options, though reservations are not accepted. WiFi is not available. Parking is available on the lot."
+    This adds 6 words. Total 178.
+    Let's check the flow.
+    "The establishment offers outdoor seating and takeout options, though reservations are not accepted. WiFi is not available. Parking is available on the lot."
+    This works.
+
+    Let's re-verify the word count with this addition.
+    Old: 172.
+    New: 172 + 6 = 178.
+    Still within 100-200.
+
+    Wait, I need to check the "kids' pasta" vs "kids pasta". The review says "The kids pasta". I will write "kids pasta".
+    Also "5.0 stars" vs "5 stars". I will use "5.0 stars" to match the JSON.
+    Also "Qupe Chardonnay". I will just say "Chardonnay" to save words and keep it objective without specific brand if not critical, but "Qupe" is in the data. "Wine prices received mixed reviews, with one customer finding a glass of Chardonnay expensive". I'll stick to Chardonnay.
+
+    One more check: "based only on the provided structured data".
+    Does "Qupe" count as making up info? It is in the review text. I will use "Chardonnay" to be safe, or "Qupe Chardonnay". "Qupe Chardonnay" is safer as it is exact data.
+    "finding a glass of Qupe Chardonnay expensive".
+    Let's adjust that sentence.
+    "Wine prices received mixed reviews, with one customer finding a glass of Qupe Chardonnay expensive..."
+    This adds 1 word ("Qupe").
+    New Total: 179.
+
+    Wait, I need to make sure I don't exceed 200.
+    Current estimate: ~179 words.
+    I will write the final version carefully.
+
+    Final check on constraints:
+    - 100-200 words.
+    - Objective overview.
+    - Based only on provided structured data.
+    - Include details from customers' review.
+    - Don't make up information.
+
+    One detail: "Mesa" appears in the review text. The JSON says "Santa Barbara". If I don't mention Mesa, am I missing info from the review? Yes. But if I mention Mesa, am I contradicting the JSON? Yes. Given the instruction "based only on the provided structured data", I should prioritize the JSON fields for the business definition (Address/City) and use the review text for sentiment/content. I will omit the specific city name "Mesa" from the review text to avoid contradiction with the official address field, but I will mention the specific food items and sentiments.
+    Actually, I can phrase it: "Guests described the location as being on the Mesa." But that contradicts the JSON 'city'. I will play it safe and just describe the food/service.
+    Wait, I'll check if I can mention "Santa Barbara" and "Mesa" as a discrepancy? No, that makes it subjective. I will stick to the JSON address.
+
+    Wait, I need to count the words in the final output precisely.
+    Draft:
+    Corner Tap Room is located at 1905 Cliff Dr in Santa Barbara, CA. It operates as a restaurant, gastropub, and cocktail bar serving American (New) and American (Traditional) cuisine. The establishment offers outdoor seating and takeout options, though reservations are not accepted. WiFi is not available. Parking is available on the lot. Hours vary, with Saturday and Sunday opening at 12:00 and closing at 22:00, while Monday is closed.
+
+    Customer feedback highlights varied experiences. One reviewer praised the Teriyaki Sliders and friendly atmosphere, noting the availability of great beers. Another guest appreciated the service, specifically mentioning the Meat Lovers Flatbread, though they found the kids pasta overly spicy. Wine prices received mixed reviews, with one customer finding a glass of Qupe Chardonnay expensive and noting the flatbread could be cold. Overall, the venue is rated 5.0 stars. Staff are generally described as friendly and responsive. While some guests suggest ordering one dish at a time to avoid temperature issues, others found the ambiance inviting. The business caters to nightlife and beer enthusiasts seeking a variety of beverages.
+
+    Word Count Check:
+    P1: 69 words (Corner... closed.)
+    P2: 110 words (Customer... beverages.)
+    Total: 179 words.
+    Range: 100-200.
+    Looks good.
+    Wait, "kids pasta" or "kids' pasta"? JSON says "kids pasta". I will use "kids pasta".
+    "Qupe Chardonnay".
+    "5.0 stars".
+    "Santa Barbara, CA".
+    "1905 Cliff Dr".
+    All from JSON or Review Text.
+    "Mesa" is omitted to avoid conflict with JSON 'city'.
+    "WiFi" is included from attributes (WiFi: None).
+    "Parking" is included from attributes.
+    "Outdoor Seating" is included.
+    "TakeOut" is included.
+    "Reservations" is included.
+    "Hours" is included.
+    "Categories" are included.
+    "Reviews" content is included.
+
+    Ready to write.
+</think>
+
+Corner Tap Room is located at 1905 Cliff Dr in Santa Barbara, CA. It operates as a restaurant, gastropub, and cocktail bar serving American (New) and American (Traditional) cuisine. The establishment offers outdoor seating and takeout options, though reservations are not accepted. WiFi is not available. Parking is available on the lot. Hours vary, with Saturday and Sunday opening at 12:00 and closing at 22:00, while Monday is closed.
+
+Customer feedback highlights varied experiences. One reviewer praised the Teriyaki Sliders and friendly atmosphere, noting the availability of great beers. Another guest appreciated the service, specifically mentioning the Meat Lovers Flatbread, though they found the kids pasta overly spicy. Wine prices received mixed reviews, with one customer finding a glass of Qupe Chardonnay expensive and noting the flatbread could be cold. Overall, the venue is rated 5.0 stars. Staff are generally described as friendly and responsive. While some guests suggest ordering one dish at a time to avoid temperature issues, others found the ambiance inviting. The business caters to nightlife and beer enthusiasts seeking a variety of beverages.
+
+Word Count: 179 words.
+Constraints Met: 100-200 words, based on provided data, includes review details, objective tone.
+Data Check:
+- Address: 1905 Cliff Dr, Santa Barbara, CA (JSON)
+- Categories: Restaurants, Gastropubs, Cocktail Bars, etc. (JSON)
+- Hours: Mon-Sun (JSON)
+- Attributes: Parking (lot), Outdoor Seating, Takeout, Reservations (False), WiFi (None) (JSON)
+- Reviews: Teriyaki Sliders, Meat Lovers Flatbread, kids pasta, Qupe Chardonnay, 5.0 stars, friendly staff (Review Text)
+- "Mesa" omitted to avoid contradiction with JSON 'city'.
+- "WiFi is not available" added from attributes (WiFi: None).
+- "Monday is closed" from hours (0:0-0:0).
+- "Qupe Chardonnay" from review text.
+- "5.0 stars" from business_stars JSON field.
+- "Teriyaki Sliders", "Meat Lovers Flatbread", "kids pasta" from review text.
+- "Outdoor seating", "takeout", "reservations" from attributes.
+- "Parking is available on the lot" from attributes.
+- "friendly" from review text and attributes.
+- "Nightlife" from categories.
+
+All information is derived strictly from the provided JSON structure. No external knowledge or hallucination is used. The word count falls within the 100-200 limit. The tone is objective. Review details are covered. Address is consistent with JSON. WiFi info is included. Hours are consistent with JSON. Parking info is consistent with JSON. Categories are summarized. Review sentiments are summarized.
+
+Final check on word count:
+P1: Corner(1) Tap(2) Room(3) is(4) located(5) at(6) 1905(7) Cliff(8) Dr(9) in(10) Santa(11) Barbara,(12) CA.(13) It(14) operates(15) as(16) a(17) restaurant,(18) gastropub,(19) and(20) cocktail(21) bar(22) serving(23) American(24) (New)(25) and(26) American(27) (Traditional)(28) cuisine.(29) The(30) establishment(31) offers(32) outdoor(33) seating(34) and(35) takeout(36) options,(37) though(38) reservations(39) are(40) not(41) accepted.(42) WiFi(43) is(44) not(45) available.(46) Parking(47) is(48) available(49) on(50) the(51) lot.(52) Hours(53) vary,(54) with(55) Saturday(56) and(57) Sunday(58) opening(59) at(60) 12:00(61) and(62) closing(63) at(64) 22:00,(65) while(66) Monday(67) is(68) closed.(69)
+
+P2: Customer(70) feedback(71) highlights(72) varied(73) experiences.(74) One(75) reviewer(76) praised(77) the(78) Teriyaki(79) Sliders(80) and(81) friendly(82) atmosphere,(83) noting(84) the(85) availability(86) of(87) great(88) beers.(89) Another(90) guest(91) appreciated(92) the(93) service,(94) specifically(95) mentioning(96) the(97) Meat(98) Lovers(99) Flatbread,(100) though(101) they(102) found(103) the(104) kids(105) pasta(106) overly(107) spicy.(108) Wine(109) prices(110) received(111) mixed(112) reviews,(113) with(114) one(115) customer(116) finding(117) a(118) glass(119) of(120) Qupe(121) Chardonnay(122) expensive(123) and(124) noting(125) the(126) flatbread(127) could(128) be(129) cold.(130) Overall,(131) the(132) venue(133) is(134) rated(135) 5.0(136) stars.(137) Staff(138) are(139) generally(140) described(141) as(142) friendly(143) and(144) responsive.(145) While(146) some(147) guests(148) suggest(149) ordering(150) one(151) dish(152) at(153) a(154) time(155) to(156) avoid(157) temperature(158) issues,(159) others(160) found(161) the(162) ambiance(163) inviting.(164) The(165) business(166) caters(167) to(168) nightlife(169) and(170) beer(171) enthusiasts(172) seeking(173) a(174) variety(175) of(176) beverages.(177)
+
+Total: 177 words. (My previous count was 179, slight variance due to counting "kids" vs "kids'". I will use "kids pasta" as per JSON review text).
+177 words is within 100-200 range.
+Perfect.
+</think>
+
+Corner Tap Room is located at 1905 Cliff Dr in Santa Barbara, CA. It operates as a restaurant, gastropub, and cocktail bar serving American (New) and American (Traditional) cuisine. The establishment offers outdoor seating and takeout options, though reservations are not accepted. WiFi is not available. Parking is available on the lot. Hours vary, with Saturday and Sunday opening at 12:00 and closing at 22:00, while Monday is closed.
+
+Customer feedback highlights varied experiences. One reviewer praised the Teriyaki Sliders and friendly atmosphere, noting the availability of great beers. Another guest appreciated the service, specifically mentioning the Meat Lovers Flatbread, though they found the kids pasta overly spicy. Wine prices received mixed reviews, with one customer finding a glass of Qupe Chardonnay expensive and noting the flatbread could be cold. Overall, the venue is rated 5.0 stars. Staff are generally described as friendly and responsive. While some guests suggest ordering one dish at a time to avoid temperature issues, others found the ambiance inviting. The business caters to nightlife and beer enthusiasts seeking a variety of beverages.

@@ -1,0 +1,7 @@
+
+
+<think>
+
+</think>
+
+To remove a row in Word, right-click inside the row you want to delete, choose "Delete Cells" from the context menu, and then select the "Delete entire row" option before clicking OK. Alternatively, you can select the row and use a keyboard shortcut.

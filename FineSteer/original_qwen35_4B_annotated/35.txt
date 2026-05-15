@@ -1,0 +1,9 @@
+["hallucination"]Based on the provided passages, the following foods are rich in potassium, magnesium, and calcium:["end-section"]
+
+*   ["hallucination"]**Dark leafy vegetables** (Kale, turnip greens, broccoli, Brussels sprouts, cabbage, spinach): Rich in calcium and magnesium.["end-section"]
+*   ["hallucination"]**Canned fish with bones** (Salmon, sardines, mackerel): Rich in potassium and calcium.["end-section"]
+*   ["hallucination"]**Beans**: Rich in potassium and magnesium.["end-section"]
+*   ["hallucination"]**Nuts and seeds**: Rich in magnesium.["end-section"]
+*   ["hallucination"]**Whole grains**: Rich in magnesium.["end-section"]
+
+*Note: While fruits like bananas, apricots, and watermelon are rich in potassium, the passages do not explicitly state they are also rich in magnesium or calcium.*

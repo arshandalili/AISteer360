@@ -1,0 +1,22 @@
+1.  **Analyze the Request:** ["hallucination"]The user wants to know the difference between single cream and double cream, based *strictly* on the provided three passages. The answer must be brief.["end-section"]
+
+2.  **Scan Passages for Differences (Composition/Properties):**
+
+    *   **Passage 1:**
+        *   ["hallucination"]Single cream: 10% to 12% butterfat. Thin liquid.
+        *   Double cream: 48% butterfat.["end-section"]
+    *   **Passage 2:**
+        *   ["hallucination"]Single cream: Too thin to be whipped into soft or hard peaks (due to high milk content).
+        *   Double cream: Excellent for whipping; whips quickly into soft and then hard peaks.["end-section"]
+    *   **Passage 3:**
+        *   ["hallucination"]Double cream: Higher fat content than single. Binds with flour to produce a thicker sauce.["end-section"]
+
+3.  **Synthesize the Differences:** ["hallucination"]The differences relate to fat content, texture/consistency, and whipping ability.["end-section"]
+
+    *   *Fat Content:* ["hallucination"]Double cream (48%) has significantly more butterfat than single cream (10%-12%).["end-section"]
+    *   *Whipping:* ["hallucination"]Double cream whips well into peaks; single cream is too thin to whip into peaks.["end-section"]
+    *   *Cooking/Texture:* ["hallucination"]Double cream's higher fat content helps bind with flour to create a thicker sauce.["end-section"]
+
+4.  **Draft the Brief Answer (Ensuring strict adherence to the text):** ["hallucination"]Combine the key points.["end-section"]
+
+5.  **Final Review:** ["hallucination"]Does the answer rely only on the passages? Yes.["end-section"] ["hallucination"]Is it brief? Yes.["end-section"] ["hallucination"](Self-Correction: Ensure the fat percentages are included as they are the primary defining difference.)["end-section"]Double cream contains 48 percent butterfat, while single cream has between 10 percent and 12 percent butterfat. Due to its higher fat content, double cream is excellent for whipping into peaks and binds with flour to produce a thicker sauce, whereas single cream is too thin to be whipped into soft or hard peaks.

@@ -1,0 +1,45 @@
+1.  **Analyze the Request:** The user wants a brief answer listing foods rich in potassium, magnesium, and calcium, strictly based on the provided three passages. If the information is missing, I must reply with "Unable to answer based on given passages."
+
+2.  **Analyze the Passages for Potassium (K):**
+    *   *Passage 1:* Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries (fruits). Salmon, beans, turkey, fish. Peas, greens, spinach, tomatoes.
+    *   *Passage 2:* Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries (fruits). Salmon, beans, turkey, fish. Peas, greens, spinach, tomatoes.
+    *   *Passage 3:* (No specific potassium list).
+
+3.  **Analyze the Passages for Calcium (Ca):**
+    *   *Passage 1:* Kale, turnip greens, broccoli, brussel sprouts, cabbage (dark leafy vegetables). Canned fish (with bones) (salmon, sardines, mackerel).
+    *   *Passage 2:* Milk, cheese, yogurt. Kale, turnip greens, broccoli, brussel sprouts, cabbage (dark leafy vegetables). Canned fish (with bones) (salmon, sardines, mackerel).
+    *   *Passage 3:* (No specific calcium list).
+
+4.  **Analyze the Passages for Magnesium (Mg):**
+    *   *Passage 1:* (No specific magnesium list).
+    *   *Passage 2:* (No specific magnesium list).
+    *   *Passage 3:* Green leafy vegetables (spinach), legumes, nuts, seeds, whole grains. Foods containing dietary fiber. Breakfast cereals and fortified foods.
+
+5.  **Synthesize the Answer (K + Ca + Mg):** I need to find foods that appear in the lists for all three nutrients, or list the general categories/specific foods mentioned for each nutrient.
+
+    *   **Potassium:** Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries, salmon, beans, turkey, fish, peas, greens, spinach, tomatoes.
+    *   **Calcium:** Milk, cheese, yogurt, kale, turnip greens, broccoli, brussel sprouts, cabbage, canned fish (salmon, sardines, mackerel).
+    *   **Magnesium:** Green leafy vegetables (spinach), legumes, nuts, seeds, whole grains, foods containing dietary fiber.
+
+6.  **Identify Overlaps/Best Examples:**
+    *   *Spinach/Greens:* Mentioned for Potassium (P1, P2) and Magnesium (P3). ["hallucination"]Also mentioned as a dark leafy vegetable, which is rich in Calcium (P1, P2).["end-section"]
+    *   *Salmon/Fish:* Mentioned for Potassium (P1, P2) and Calcium (P1, P2).
+    *   ["hallucination"]*Beans/Legumes:* Mentioned for Potassium (P1, P2) and Magnesium (P3).["end-section"]
+
+7.  **Formulate the Brief Answer:** Since the request asks for "food rich in potassium magnesium and calcium," I should list the specific foods or categories that appear in the lists for these nutrients.
+
+    *   *Specific foods mentioned for multiple nutrients:* Spinach/Greens, Salmon/Fish, ["hallucination"]Beans/Legumes["end-section"].
+    *   *General categories:* Dark leafy vegetables (Kale, broccoli, etc.), Fruits (Bananas, etc.), Whole grains, Nuts, Seeds.
+
+8.  **Final Review against Constraints:** The answer must be brief and strictly based on the passages. Listing the specific foods mentioned for each nutrient is the most accurate approach.
+
+    *   *Drafting the response focusing on the most comprehensive list:*
+        *   Potassium: Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries, salmon, beans, turkey, fish, peas, greens, spinach, tomatoes.
+        *   Calcium: Milk, cheese, yogurt, kale, turnip greens, broccoli, brussel sprouts, cabbage, canned fish (salmon, sardines, mackerel).
+        *   Magnesium: Green leafy vegetables (spinach), legumes, nuts, seeds, whole grains.
+
+    *   *Refining for brevity and clarity:* I will list the specific foods/categories mentioned for each nutrient. (Self-Correction: Listing them separately is clearer than trying to force a single list.)**Potassium:** Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries, salmon, beans, turkey, fish, peas, greens, spinach, and tomatoes.
+
+**Calcium:** Milk, cheese, yogurt, kale, turnip greens, broccoli, brussel sprouts, cabbage, and canned fish (salmon, sardines, mackerel).
+
+**Magnesium:** Green leafy vegetables (such as spinach), legumes, nuts, seeds, and whole grains.

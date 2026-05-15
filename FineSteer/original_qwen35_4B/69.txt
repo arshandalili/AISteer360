@@ -1,0 +1,6 @@
+
+<think>
+
+</think>
+
+Right-click the row, select Delete, and choose Delete entire row from the context menu. Alternatively, select the row and use the keyboard shortcut.

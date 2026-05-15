@@ -1,0 +1,1 @@
+To remove a row, right-click a row or column and click the command you want. Alternatively, right-click in a cell inside the row you wish to delete, choose Delete Cells from the context menu, select the Delete entire row option, and click OK.

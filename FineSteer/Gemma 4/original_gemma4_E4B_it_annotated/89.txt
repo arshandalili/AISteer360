@@ -1,0 +1,28 @@
+1.  **Analyze the Request:** The user is asking for a "butcher shop phone number" and requires the answer to be strictly based on the three provided passages. If the information is missing, the response must be "Unable to answer based on given passages."
+
+2.  **Examine the Passages for Phone Numbers:**
+
+    *   **Passage 1:**
+        *   Butcher Shop - Hayward
+        *   Phone Number: (510) 889-8690
+    *   **Passage 2:**
+        *   Butcher Shop - Lakefield
+        *   Phone Number: (507) 662-6281
+    *   **Passage 3:**
+        *   The Local Butcher Shop phone number: (510) 845-6328
+        *   Boones Butcher Shop phone number: (502) 348-3668
+        *   Ye Ole Butcher Shop phone number: (972) 423-1848
+        *   J Ms Butcher Shop phone number: (865) 483-9228
+
+3.  **Synthesize the Answer:** Since the query is general ("butcher shop phone number"), and multiple numbers are provided, I must list the available options or provide a representative answer based on the data. Listing all options is the most accurate way to fulfill the request based *only* on the passages.
+
+4.  **Formulate the Output:** Present the numbers clearly. (Self-Correction: The prompt asks for a *brief* answer. Listing the options is brief and accurate.)
+
+    *   (510) 889-8690 (Hayward)
+    *   (507) 662-6281 (Lakefield)
+    *   (510) 845-6328 (The Local Butcher Shop)
+    *   (502) 348-3668 (Boones Butcher Shop)
+    *   (972) 423-1848 (Ye Ole Butcher Shop)
+    *   (865) 483-9228 (J Ms Butcher Shop)
+
+5.  **Final Review:** Does this strictly adhere to the passages? Yes. Is it brief? Yes. (I will list the options for completeness.)(510) 889-8690 (Hayward), (507) 662-6281 (Lakefield), (510) 845-6328 (The Local Butcher Shop), (502) 348-3668 (Boones Butcher Shop), (972) 423-1848 (Ye Ole Butcher Shop), or (865) 483-9228 (J Ms Butcher Shop).

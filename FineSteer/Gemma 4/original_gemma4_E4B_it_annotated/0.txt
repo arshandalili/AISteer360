@@ -1,0 +1,39 @@
+1.  **Analyze the Request:** The user wants a brief answer listing foods rich in potassium, magnesium, and calcium, strictly based on the provided three passages. If the information is missing, I must reply with "Unable to answer based on given passages."
+
+2.  **Scan for Potassium (K):**
+    *   *Passage 1:* Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries (fruits). Salmon, beans, turkey, fish. Peas, greens, spinach, tomatoes.
+    *   *Passage 2:* Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries (fruits). Salmon, beans, turkey, fish. Peas, greens, spinach, tomatoes.
+    *   *Passage 3:* (No specific K list).
+
+3.  **Scan for Calcium (Ca):**
+    *   *Passage 1:* Dark leafy vegetables (Kale, turnip greens, broccoli, brussel sprouts, cabbage). Canned fish (with bones) (salmon, sardines, mackerel).
+    *   *Passage 2:* Milk, cheese, yogurt. Dark leafy vegetables (Kale, turnip greens, broccoli, brussel sprouts, cabbage). Canned fish (with bones) (salmon, sardines, mackerel).
+    *   *Passage 3:* (No specific Ca list).
+
+4.  **Scan for Magnesium (Mg):**
+    *   *Passage 1:* (No specific Mg list).
+    *   *Passage 2:* (No specific Mg list).
+    *   *Passage 3:* Green leafy vegetables (spinach). Legumes, nuts, seeds, whole grains. Foods containing dietary fiber. Breakfast cereals and other fortified foods.
+
+5.  **Synthesize the Answer (Combining K, Ca, and Mg sources):**
+
+    *   *Overlap/Common Sources:*
+        *   Spinach (K, Mg, ["hallucination"]Ca["end-section"] - *Note: Passage 1/2 list spinach for K; Passage 3 lists spinach for Mg. Passage 1/2 list dark leafy greens for Ca.*)
+        *   Dark leafy vegetables (Kale, turnip greens, broccoli, brussel sprouts, cabbage) (Ca, ["hallucination"]Mg["end-section"] - *Note: Passage 3 mentions green leafy vegetables for Mg.*)
+        *   Salmon (K, Ca - *Note: Passage 1/2 list salmon for K and Ca.*)
+
+    *   *List the specific foods mentioned for each nutrient:*
+
+        *   **Potassium:** Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries, salmon, beans, turkey, fish, peas, greens, spinach, tomatoes.
+        *   **Calcium:** Milk, cheese, yogurt, dark leafy vegetables (Kale, turnip greens, broccoli, brussel sprouts, cabbage), canned fish (with bones) (salmon, sardines, mackerel).
+        *   **Magnesium:** Green leafy vegetables (spinach), legumes, nuts, seeds, whole grains, foods containing dietary fiber, breakfast cereals and other fortified foods.
+
+6.  **Final Review against Constraints:** The answer must be brief and strictly based on the passages. Since the passages provide lists of foods for each nutrient, I can list the overlapping and unique sources.
+
+7.  **Draft the Output.** (Focusing on listing the sources clearly.)Foods rich in these nutrients include:
+
+**Potassium:** Bananas, apricots, prunes, dates, cantaloupe, watermelon, strawberries, salmon, beans, turkey, fish, peas, greens, spinach, and tomatoes.
+
+**Calcium:** Milk, cheese, yogurt, dark leafy vegetables (Kale, turnip greens, broccoli, brussel sprouts, cabbage), and canned fish (with bones) (salmon, sardines, mackerel).
+
+**Magnesium:** Green leafy vegetables (such as spinach), legumes, nuts, seeds, whole grains, foods containing dietary fiber, and breakfast cereals and other fortified foods.

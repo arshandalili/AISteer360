@@ -1,0 +1,47 @@
+1.  **Analyze the Request:** The user wants a brief answer on "safely clean your computer screen," strictly based on the provided three passages. If the information is missing, I must reply with "Unable to answer based on given passages."
+
+2.  **Scan Passages for Cleaning Methods/Safety Tips:**
+
+    *   **Passage 1:**
+        *   Less touching is better.
+        *   Lightly wipe with a dry and clean microfiber cloth.
+        *   DO NOT use paper towels, kitchen towels, or household rags; only microfiber.
+        *   (Mentions "ow to Safely Clean Your Screen" but doesn't provide the full instructions in the snippet).
+
+    *   **Passage 2:**
+        *   Mix solution: 1 part isopropyl alcohol + 1 part distilled water (in a spray bottle).
+        *   Turn off the laptop (easier to see dust/smudges).
+        *   Spray a lint-free cloth with the solution/LCD cleaner.
+        *   Wipe thoroughly with the cloth.
+        *   Clean in one direction (to prevent streaks).
+
+    *   **Passage 3:**
+        *   Microfiber clothes are washable, soft, and safe.
+        *   Use a clean cotton ball or swab for edges.
+        *   ALWAYS clean the screen powered off.
+        *   DO NOT touch the LCD screen (shortens lifespan).
+        *   NEVER use window or abrasive cleaner.
+        *   If a spot doesn't come off, DO NOT rub harder (can kill pixels).
+
+3.  **Synthesize the Answer (Drafting the steps):**
+
+    *   *Preparation/Safety:* Always turn the screen off. Do not touch the screen.
+    *   *Tools:* Use a microfiber cloth (or lint-free cloth). For edges, use a cotton ball or swab.
+    *   *Cleaning (Dry):* Lightly wipe with a dry microfiber cloth.
+    *   *Cleaning (Wet):* Mix 1 part isopropyl alcohol and 1 part distilled water. Spray a lint-free cloth with this solution or LCD cleaner. Wipe thoroughly in one direction.
+    *   *Warnings:* Never use paper towels, kitchen towels, household rags, window, or abrasive cleaners. Do not rub harder if a spot doesn't come off.
+
+4.  **Final Review against Constraints:**
+    *   ["hallucination"]Is it brief? Yes.["end-section"]
+    *   Is it strictly based on the passages? Yes.
+
+5.  **Construct the Final Output.** (The synthesized steps are comprehensive and directly sourced.)Always clean your screen powered off. Do not touch the screen.
+
+**Cleaning Methods:**
+*   **Dry Cleaning:** Lightly wipe the screen with a dry and clean microfiber cloth.
+*   **Wet Cleaning:** Mix 1 part isopropyl alcohol and 1 part distilled water in a spray bottle. Spray a lint-free cloth with this solution or LCD cleaner, and wipe the screen thoroughly in one direction.
+*   **Edges:** Use a clean cotton ball or swab to clean the edges of the LCD screen.
+
+**Safety Precautions:**
+*   Never use paper towels, kitchen towels, household rags, window, or abrasive cleaner.
+*   If a spot does not come off, do not rub harder.

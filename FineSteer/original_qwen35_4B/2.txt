@@ -1,0 +1,79 @@
+
+<think>
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Question: "how to soak off gel polish"
+    *   Constraint: The response must be strictly based on the three provided passages.
+    *   Constraint: If the passages don't contain the necessary information, reply with "Unable to answer based on given passages."
+    *   Output format: Just the answer (or the specific phrase if unable).
+
+2.  **Analyze the Passages:**
+    *   *Passage 1:* Describes Gelish Soak Off Gel Nail Polish features (lasts 21 days, performance, coverage, removal process mentioned generally as "easy removal process", color pigments). No specific steps on *how* to remove it.
+    *   *Passage 2:* Provides specific steps for removing gel polish.
+        *   Step 1: Helps break through the top coat (implied by context of remover).
+        *   Step 2: Soak a cotton ball with acetone remover and place on fingernail.
+        *   Step 3: Wrap finger with cotton ball in foil, squeeze tight.
+        *   Step 4: Remove foil, check polish loosening.
+        *   Step 5: Push polish off with orange stick/cuticle pusher (warns not to use sharp things).
+        *   Step 6: Repeat for each nail.
+    *   *Passage 3:* Describes Gelish product features (cures in LED/UV, lasts 3 weeks, soaks off in 10-15 minutes). Mentions "Application & Removal" but doesn't detail the *how*.
+
+3.  **Evaluate Information Sufficiency:**
+    *   The question asks "how to soak off gel polish".
+    *   Passage 2 explicitly details the steps: soak cotton with acetone, wrap in foil, wait for loosening, push off with orange stick.
+    *   Therefore, the information is present in the passages (specifically Passage 2).
+
+4.  **Draft the Response:**
+    *   I need to synthesize the steps from Passage 2 into a concise answer.
+    *   Steps:
+        1.  Break through the top coat (implied by soaking).
+        2.  Soak a cotton ball with acetone remover and place on the nail.
+        3.  Wrap the finger with the cotton ball in foil, squeezing tight for contact.
+        4.  Remove foil when polish comes loose.
+        5.  Push the polish off using an orange stick or cuticle pusher (avoiding sharp objects).
+        6.  Repeat for each nail.
+
+5.  **Refine for Constraints:**
+    *   The prompt asks to "Briefly answer".
+    *   Must be strictly based on the passages.
+    *   Must not add external knowledge (like "use acetone" is in passage 2, "foil" is in passage 2).
+
+    *Draft:* Soak a cotton ball with acetone remover and place it on the fingernail. Wrap the finger with the cotton ball in foil, squeezing it tight. Remove the foil when you see the polish coming loose from the edges. Push the polish off using an orange stick or cuticle pusher, avoiding anything too sharp. Repeat this step for each nail.
+
+6.  **Final Check:**
+    *   Does it answer "how to soak off gel polish"? Yes.
+    *   Is it based *strictly* on the passages? Yes, all steps come from Passage 2.
+    *   Is it brief? Yes.
+
+7.  **Final Output Generation:** (Selecting the drafted text).
+
+    *Wait, looking closer at Passage 2 numbering:*
+    "1 This helps break through the top coat..."
+    "2 Soak a cotton ball..."
+    "3 Wrap the finger..."
+    "Remove the foil..."
+    "Push the polish off..."
+    "4 Repeat this step..."
+
+    I will combine these into a coherent paragraph.
+
+    *Revised Draft:* Soak a cotton ball with acetone remover and place it on the fingernail. Wrap the finger with the cotton ball in foil, squeezing it tight so the cotton ball stays in contact with the nail. Remove the foil when you can see the polish coming loose from the edges. Push the polish off using an orange stick or cuticle pusher, avoiding anything too sharp. Repeat this step for each nail.
+
+    *Wait, one more check:* The prompt says "In case the passages do not contain the necessary information to answer the question, please reply with: 'Unable to answer based on given passages.'" Since Passage 2 *does* contain the information, I should not use that phrase.
+
+    *Final Polish:* Ensure it flows well as a brief answer.
+
+    "Soak a cotton ball with acetone remover and place it on the fingernail. Wrap the finger with the cotton ball in foil, squeezing it tight so the cotton ball stays in contact with the nail. Remove the foil when you see the polish coming loose from the edges. Push the polish off using an orange stick or cuticle pusher, avoiding anything too sharp. Repeat this step for each nail."
+
+    This looks accurate to Passage 2.
+
+    *Wait, checking Passage 1 and 3 again just in case:*
+    Passage 1 mentions "easy removal process" but no steps.
+    Passage 3 mentions "soaks completely off in only 10 - 15 minutes" but no steps.
+    Passage 2 is the only source of the "how-to".
+
+    Okay, ready to output.cw
+</think>
+
+Soak a cotton ball with acetone remover and place it on the fingernail. Wrap the finger with the cotton ball in foil, squeezing it tight so the cotton ball stays in contact with the nail. Remove the foil when you see the polish coming loose from the edges. Push the polish off using an orange stick or cuticle pusher, avoiding anything too sharp. Repeat this step for each nail.
